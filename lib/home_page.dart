@@ -4,9 +4,11 @@ import 'package:onboarding_library/circle_menu_page.dart';
 import 'package:onboarding_library/credit_card_page.dart';
 import 'package:onboarding_library/day_night_time_picker.dart';
 import 'package:onboarding_library/delay_display_page.dart';
+import 'package:onboarding_library/drawing_animation.dart';
 import 'package:onboarding_library/flip_card_page.dart';
 import 'package:onboarding_library/like_button_page.dart';
 import 'package:onboarding_library/text_kit_page.dart';
+import 'package:onboarding_library/transition/transition_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -86,6 +88,21 @@ class _HomePageState extends State<HomePage> {
                   );
                 }, child: Text("Like button")),
 
+
+                ElevatedButton(onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const DrawingAnimationPage()),
+                  );
+                }, child: Text("Drawing Animation")),
+
+
+                ElevatedButton(onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const TransitionPage()),
+                  );
+                }, child: Text("Transition")),
 
 
               ],
