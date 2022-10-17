@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding_library/advance_icon.dart';
 import 'package:onboarding_library/animate_do.dart';
+import 'package:onboarding_library/animate_size_fade.dart';
 import 'package:onboarding_library/circle_menu_page.dart';
 import 'package:onboarding_library/credit_card_page.dart';
 import 'package:onboarding_library/day_night_time_picker.dart';
@@ -103,6 +105,21 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => const TransitionPage()),
                   );
                 }, child: Text("Transition")),
+
+
+                ElevatedButton(onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AnimateSizeFadePage()),
+                  );
+                }, child: Text("Animate size and fade")),
+
+                ElevatedButton(onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AdvanceIconPage()),
+                  );
+                }, child: Text("Advance Icon")),
 
 
               ],

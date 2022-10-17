@@ -46,6 +46,8 @@ dependencies:
   animated_text_kit: ^4.2.2
   drawing_animation: ^1.0.1
   page_transition: ^2.0.9
+  animated_size_and_fade: ^3.0.0
+  advanced_icon: ^0.1.2
 
 dev_dependencies:
   flutter_test:
