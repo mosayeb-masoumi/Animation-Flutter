@@ -9,6 +9,7 @@ import 'package:onboarding_library/delay_display_page.dart';
 import 'package:onboarding_library/drawing_animation.dart';
 import 'package:onboarding_library/flip_card_page.dart';
 import 'package:onboarding_library/like_button_page.dart';
+import 'package:onboarding_library/star_menu.dart';
 import 'package:onboarding_library/text_kit_page.dart';
 import 'package:onboarding_library/transition/transition_page.dart';
 
@@ -120,6 +121,13 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(builder: (context) => const AdvanceIconPage()),
                   );
                 }, child: Text("Advance Icon")),
+
+                ElevatedButton(onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const StarMenuPage()),
+                  );
+                }, child: Text("Star menu")),
 
 
               ],

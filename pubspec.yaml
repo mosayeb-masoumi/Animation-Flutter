@@ -48,6 +48,7 @@ dependencies:
   page_transition: ^2.0.9
   animated_size_and_fade: ^3.0.0
   advanced_icon: ^0.1.2
+  star_menu: ^3.0.0+2
 
 dev_dependencies:
   flutter_test:
