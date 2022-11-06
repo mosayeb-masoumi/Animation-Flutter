@@ -29,6 +29,7 @@ class _StarMenuPageState extends State<StarMenuPage> {
     // Here the sub-menus are added with [addStarMenu] extension
     List<Widget> otherEntries = [
       FloatingActionButton(
+        heroTag: "",
         onPressed: (){
           var a= 5;
         },
@@ -38,26 +39,31 @@ class _StarMenuPageState extends State<StarMenuPage> {
 
 
       FloatingActionButton(
+        heroTag: "",
         onPressed: (){},
         backgroundColor: Colors.black,
         child: Icon(Icons.add_call),
       ).addStarMenu(upperMenuItems, StarMenuParameters.dropdown(context)),
       FloatingActionButton(
+        heroTag: "",
         onPressed: (){},
         backgroundColor: Colors.indigo,
         child: Icon(Icons.adb),
       ).addStarMenu(upperMenuItems, StarMenuParameters.dropdown(context)),
       FloatingActionButton(
+        heroTag: "",
         onPressed: (){},
         backgroundColor: Colors.purple,
         child: Icon(Icons.home),
       ).addStarMenu(upperMenuItems, StarMenuParameters.dropdown(context)),
       FloatingActionButton(
+        heroTag: "",
         onPressed: (){},
         backgroundColor: Colors.blueGrey,
         child: Icon(Icons.delete),
       ).addStarMenu(upperMenuItems, StarMenuParameters.dropdown(context)),
       FloatingActionButton(
+        heroTag: "",
         onPressed: (){},
         backgroundColor: Colors.deepPurple,
         child: Icon(Icons.get_app),
@@ -123,9 +129,11 @@ class _StarMenuPageState extends State<StarMenuPage> {
               alignment: Alignment.center,
               child: StarMenu(
 
+
                 params: StarMenuParameters(),
                 items: otherEntries,
                 child: FloatingActionButton(
+                  heroTag: "",
                   onPressed: (){},
                   mini: true,
                   backgroundColor: Colors.blue,
@@ -146,6 +154,7 @@ class _StarMenuPageState extends State<StarMenuPage> {
                 ),
                 items: otherEntries,
                 child: FloatingActionButton(
+                    heroTag: "",
                     onPressed: (){}, child: Icon(Icons.home_work_outlined)),
               ),
             ),
@@ -178,6 +187,7 @@ class _StarMenuPageState extends State<StarMenuPage> {
                   ),
                 ],
                 child: FloatingActionButton(
+                    heroTag: "",
                     onPressed: (){}, child: Icon(Icons.grid_view)),
               ),
             ),
@@ -199,6 +209,7 @@ class _StarMenuPageState extends State<StarMenuPage> {
                 ),
                 items: chipsEntries,
                 child: FloatingActionButton(
+                    heroTag: "",
                     onPressed: (){}, child: Icon(Icons.view_stream_rounded)),
               ),
             ),
