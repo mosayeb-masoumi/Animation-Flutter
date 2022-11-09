@@ -30,7 +30,7 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Like Button Demo'),
+        title: const Text('text kit animation'),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -266,6 +266,7 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
                 child: AnimatedTextKit(
                   animatedTexts: [
                     WavyAnimatedText('Hello World'),
+                    TyperAnimatedText(" Look at the waves  ,Look at the waves"),
                     WavyAnimatedText('Look at the waves'),
                   ],
                   isRepeatingAnimation: true,

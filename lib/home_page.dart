@@ -3,10 +3,12 @@ import 'package:onboarding_library/advance_icon.dart';
 import 'package:onboarding_library/animate_do.dart';
 import 'package:onboarding_library/animate_size_fade.dart';
 import 'package:onboarding_library/animated_container_page.dart';
+import 'package:onboarding_library/animated_cross_fade_page.dart';
 import 'package:onboarding_library/circle_menu_page.dart';
 import 'package:onboarding_library/credit_card_page.dart';
 import 'package:onboarding_library/day_night_time_picker.dart';
 import 'package:onboarding_library/delay_display_page.dart';
+import 'package:onboarding_library/fade_in_out.dart';
 import 'package:onboarding_library/flip_card_page.dart';
 import 'package:onboarding_library/like_button_page.dart';
 import 'package:onboarding_library/star_menu.dart';
@@ -141,6 +143,20 @@ class _HomePageState extends State<HomePage> {
                     );
                   }, child: Text("Tween Animation")),
 
+                  ElevatedButton(onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const AnimatedCrossFadePage()),
+                    );
+                  }, child: Text("animatyed CrossFade")),
+
+
+                  ElevatedButton(onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const FadeInOut()),
+                    );
+                  }, child: Text("Fade in/out")),
 
                 ],
               ),
