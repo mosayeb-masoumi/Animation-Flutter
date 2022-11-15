@@ -8,6 +8,7 @@ import 'package:onboarding_library/circle_menu_page.dart';
 import 'package:onboarding_library/credit_card_page.dart';
 import 'package:onboarding_library/day_night_time_picker.dart';
 import 'package:onboarding_library/delay_display_page.dart';
+import 'package:onboarding_library/expandable_text.dart';
 import 'package:onboarding_library/fade_in_out.dart';
 import 'package:onboarding_library/flip_card_page.dart';
 import 'package:onboarding_library/like_button_page.dart';
@@ -121,6 +122,15 @@ class _HomePageState extends State<HomePage> {
                       MaterialPageRoute(builder: (context) => const AnimateSizeFadePage()),
                     );
                   }, child: Text("Animate size and fade")),
+
+
+                  ElevatedButton(onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>  ExpandableTextPage(),
+                    ));
+                  }, child: Text("Expandable text")),
+
 
                   ElevatedButton(onPressed: (){
                     Navigator.push(

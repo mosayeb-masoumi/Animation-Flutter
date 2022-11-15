@@ -44,8 +44,7 @@ class _AnimatedCrossFadePageState extends State<AnimatedCrossFadePage> {
                   // ),
                   child: Image(image: AssetImage("assets/images/image3.jpg") ,fit: BoxFit.fill ,),
                 ),
-                crossFadeState:
-                    _bool ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+                crossFadeState: _bool ? CrossFadeState.showFirst : CrossFadeState.showSecond,
                 duration: const Duration(milliseconds: 3000)),
             ElevatedButton(
                 onPressed: () {
