@@ -50,6 +50,7 @@ dependencies:
   advanced_icon: ^0.1.2
   star_menu: ^3.0.0+2
   expandable_text: ^2.3.0
+  fluttertoast: ^8.1.1
 
   responsive_framework: ^0.2.0
 

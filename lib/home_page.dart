@@ -14,6 +14,7 @@ import 'package:onboarding_library/flip_card_page.dart';
 import 'package:onboarding_library/like_button_page.dart';
 import 'package:onboarding_library/star_menu.dart';
 import 'package:onboarding_library/text_kit_page.dart';
+import 'package:onboarding_library/toast.dart';
 import 'package:onboarding_library/transition/transition_page.dart';
 import 'package:onboarding_library/tween_animation_page.dart';
 
@@ -167,6 +168,14 @@ class _HomePageState extends State<HomePage> {
                       MaterialPageRoute(builder: (context) => const FadeInOut()),
                     );
                   }, child: Text("Fade in/out")),
+
+
+                  ElevatedButton(onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>  const ToastPage()),
+                    );
+                  }, child: Text("Toast page")),
 
                 ],
               ),

@@ -46,6 +46,17 @@ class _AnimateDoState extends State<AnimateDo> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                FadeInDownBig(child:  Container(width: MediaQuery.of(context).size.width, height:50, color: Colors.blue), duration: Duration(seconds: 4) ),
+                // FadeOutUpBig(child:  Container(width: MediaQuery.of(context).size.width, height:50, color: Colors.blue), duration: Duration(seconds: 4) ),
+              ],
+            ),
+
+            SizedBox(height: 10,),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
                 FadeInDownBig(child: const Square(color: Colors.blue), duration: Duration(seconds: 6) ),
                 FadeInDownBig(child: const Square(color: Colors.blue), duration: Duration(seconds: 6) ),
                 FadeInDownBig(child: const Square(color: Colors.blue), duration: Duration(seconds: 6) ),
