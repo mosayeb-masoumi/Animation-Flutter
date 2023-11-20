@@ -60,6 +60,7 @@ import 'cuportino_sliding_segmented_control_page.dart';
 import 'expansion_tile_page.dart';
 import 'keyboard_virtual/virtual_keyboard.dart';
 import 'longpress_draggable_page.dart';
+import 'matrix_transition_example.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -664,6 +665,17 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("ClipperExample")),
+
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const MatrixTransitionExample()),
+                        );
+                      },
+                      child: Text("MatrixTransition")),
 
 
 
