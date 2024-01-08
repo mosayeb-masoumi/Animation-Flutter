@@ -37,6 +37,7 @@ import 'package:flutter_animation/like_button_page.dart';
 import 'package:flutter_animation/liquid_pull_to_refresh.dart';
 import 'package:flutter_animation/moving_border_color.dart';
 import 'package:flutter_animation/neomorphism/nepmorphism_page.dart';
+import 'package:flutter_animation/pin_code_fields_example.dart';
 import 'package:flutter_animation/popup_menu_item.dart';
 import 'package:flutter_animation/positioned_screen.dart';
 import 'package:flutter_animation/radio_list_tile_page.dart';
@@ -47,6 +48,7 @@ import 'package:flutter_animation/slider_page.dart';
 import 'package:flutter_animation/sliver_tabbar.dart';
 import 'package:flutter_animation/star_menu.dart';
 import 'package:flutter_animation/stepper_page.dart';
+import 'package:flutter_animation/sticky_headers_example.dart';
 import 'package:flutter_animation/switch_animate/switch_animation_page.dart';
 import 'package:flutter_animation/table_page.dart';
 import 'package:flutter_animation/text_kit_page.dart';
@@ -690,6 +692,27 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Text("CustomScrollViewExamples")),
 
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const StickyHeadersExamples()),
+                        );
+                      },
+                      child: Text("StickyHeadersExamples")),
+
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const PinCodeFieldsExample()),
+                        );
+                      },
+                      child: Text("PinCodeFieldsExamples")),
 
 
 
