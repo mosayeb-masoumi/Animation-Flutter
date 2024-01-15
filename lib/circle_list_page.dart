@@ -42,6 +42,7 @@ class _CircleListPageState extends State<CircleListPage> {
                child: Center(
                  child: CircleList(
                    centerWidget: Container(width: 20,height: 20, color: Colors.red,),
+                   showInitialAnimation: true,
                    // animationSetting: AnimationSetting(duration: Duration(milliseconds: 50) , curve: Curves.bounceInOut),
                    outerRadius: 150,
                     onDragEnd: () {
