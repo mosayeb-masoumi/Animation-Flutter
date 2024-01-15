@@ -58,6 +58,7 @@ import 'package:flutter_animation/transition/transition_page.dart';
 import 'package:flutter_animation/tween_animation_page.dart';
 import 'package:flutter_animation/wrap_chip_page.dart';
 
+import 'circle_list_page.dart';
 import 'cuportino_sliding_segmented_control_page.dart';
 import 'custom_scroll_view_examples/custom_sroll_view_examples.dart';
 import 'expansion_tile_page.dart';
@@ -714,6 +715,16 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Text("PinCodeFieldsExamples")),
 
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CircleListPage()),
+                        );
+                      },
+                      child: Text("CircleListPage")),
 
 
 
