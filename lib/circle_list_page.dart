@@ -41,13 +41,39 @@ class _CircleListPageState extends State<CircleListPage> {
                height: 200,
                child: Center(
                  child: CircleList(
+                   centerWidget: Container(width: 20,height: 20, color: Colors.red,),
+                   // animationSetting: AnimationSetting(duration: Duration(milliseconds: 50) , curve: Curves.bounceInOut),
                    outerRadius: 150,
-                    origin: Offset(0, 0),
+                    onDragEnd: () {
+                      var a = 5;
+                    },
+                   onDragStart: (startCoord) {
+                     var a = 5;
+                   },
+                   onDragUpdate:(updateCoord) {
+                     var a = 5;
+                   },
+
+
+
+                    origin: const Offset(0, 0),
                     children: List.generate(10, (index) {
-                      return Icon(
-                        Icons.details,
-                        color: index % 2 == 0 ? Colors.blue : Colors.orange,
+
+                      return GestureDetector(
+                        onTap: (){
+
+                        },
+                        child: Container(
+                          // width: 20,
+                          // height: 20,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(width: 2, color: Colors.red)
+                          ),
+                          child: Center(child: Text(index.toString())),
+                        ),
                       );
+
                     }),
                   ),
                ),
