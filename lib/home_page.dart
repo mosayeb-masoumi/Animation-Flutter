@@ -44,12 +44,12 @@ import 'package:flutter_animation/radio_list_tile_page.dart';
 import 'package:flutter_animation/refresh_indicatior_page.dart';
 import 'package:flutter_animation/reorderable_listview_page.dart';
 import 'package:flutter_animation/shimmer_image_cache.dart';
+import 'package:flutter_animation/slide_switcher_pahe.dart';
 import 'package:flutter_animation/slider_page.dart';
 import 'package:flutter_animation/sliver_tabbar.dart';
 import 'package:flutter_animation/star_menu.dart';
 import 'package:flutter_animation/stepper_page.dart';
 import 'package:flutter_animation/sticky_headers_example.dart';
-import 'package:flutter_animation/switch_animate/switch_animation_page.dart';
 import 'package:flutter_animation/table_page.dart';
 import 'package:flutter_animation/text_kit_page.dart';
 import 'package:flutter_animation/toast.dart';
@@ -58,6 +58,7 @@ import 'package:flutter_animation/transition/transition_page.dart';
 import 'package:flutter_animation/tween_animation_page.dart';
 import 'package:flutter_animation/wrap_chip_page.dart';
 
+import 'animate_toggle_switch_page.dart';
 import 'circle_list_page.dart';
 import 'cuportino_sliding_segmented_control_page.dart';
 import 'custom_scroll_view_examples/custom_sroll_view_examples.dart';
@@ -282,16 +283,7 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Toast swap dismissable page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const SwitchAnimationPage()),
-                        );
-                      },
-                      child: Text("Switch animation")),
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -725,6 +717,32 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("CircleListPage")),
+
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SlideSwitcherPage()),
+                        );
+                      },
+                      child: Text("SlideSwitcherPage")),
+
+
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AnimatedToggleSwitchPage()),
+                        );
+                      },
+                      child: Text("AnimatedToggleSwitchPage")),
+
+
+
 
 
 

@@ -85,6 +85,12 @@ dependencies:
 
   circle_list: ^1.0.5
 
+  slide_switcher: ^1.1.2
+
+  animated_toggle_switch: ^0.8.0
+  toggle_switch: ^2.1.0
+
+  font_awesome_flutter: ^10.6.0
 
 dev_dependencies:
   flutter_test:
