@@ -62,6 +62,7 @@ import 'animate_toggle_switch_page.dart';
 import 'circle_list_page.dart';
 import 'cuportino_sliding_segmented_control_page.dart';
 import 'custom_scroll_view_examples/custom_sroll_view_examples.dart';
+import 'date_picker_example/data_picker_example.dart';
 import 'expansion_tile_page.dart';
 import 'keyboard_virtual/virtual_keyboard.dart';
 import 'longpress_draggable_page.dart';
@@ -741,6 +742,15 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Text("AnimatedToggleSwitchPage")),
 
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DataPickerExample()),
+                        );
+                      },
+                      child: Text("DataPickerExample")),
 
 
 
