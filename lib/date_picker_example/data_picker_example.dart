@@ -60,7 +60,7 @@ class _DataPickerExampleState extends State<DataPickerExample> {
                     value: _currentYearValue,
                     minValue: 1350,
                     maxValue: 1450,
-                    infiniteLoop: true,
+                    infiniteLoop: false,
                     textStyle: const TextStyle(fontSize: 15),
                     selectedTextStyle: const TextStyle(
                         fontSize: 17,
@@ -72,31 +72,34 @@ class _DataPickerExampleState extends State<DataPickerExample> {
                         setState(() => _currentYearValue = value),
                   ),
                   NumberPicker(
-                    itemWidth: 70,
-                    value: _currentMonthValue,
-                    minValue: 1,
-                    maxValue: 12,
-                    infiniteLoop: true,
-                    textStyle: const TextStyle(fontSize: 15),
-                    selectedTextStyle: const TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.red),
-                    step: 1,
-                    haptics: true,
-                    onChanged: (value) =>
-                        setState(() => _currentMonthValue = value),
-                  ),
+                      itemWidth: 70,
+                      value: _currentMonthValue,
+                      minValue: 1,
+                      maxValue: 12,
+                      infiniteLoop: false,
+                      textStyle: const TextStyle(fontSize: 15),
+                      selectedTextStyle: const TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red),
+                      step: 1,
+                      haptics: true,
+                      onChanged: (value) {
+                        // _currentDayValue = _getMaxDay(value);
+                        setState(() {
+                          _currentMonthValue = value;
+                          int newMaxDay = _getMaxDay(value);
+                          _currentDayValue = _currentDayValue > newMaxDay
+                              ? newMaxDay
+                              : _currentDayValue;
+                        });
+                      }),
                   NumberPicker(
                     itemWidth: 70,
                     value: _currentDayValue,
                     minValue: 1,
-                    maxValue: _currentMonthValue <= 6
-                        ? 31
-                        : (_currentMonthValue >= 7 && _currentMonthValue < 12)
-                            ? 30
-                            : 29,
-                    infiniteLoop: true,
+                    maxValue: _getMaxDay(_currentMonthValue),
+                    infiniteLoop: false,
                     textStyle: const TextStyle(fontSize: 15),
                     selectedTextStyle: const TextStyle(
                         fontSize: 17,
@@ -110,10 +113,9 @@ class _DataPickerExampleState extends State<DataPickerExample> {
                 ],
               ),
             ),
-           const SizedBox(
+            const SizedBox(
               height: 5,
             ),
-
             NumberPicker(
               value: _currentHorizontalIntValue,
               minValue: 0,
@@ -132,5 +134,16 @@ class _DataPickerExampleState extends State<DataPickerExample> {
         ),
       ),
     );
+  }
+
+  int _getMaxDay(int month) {
+    int maxDay = month <= 6
+        ? 31
+        : (month > 6 && month < 12)
+            ? 30
+            : (Jalali(_currentYearValue).isLeapYear())
+                ? 30
+                : 29;
+    return maxDay;
   }
 }
