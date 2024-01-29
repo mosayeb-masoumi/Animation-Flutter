@@ -98,6 +98,9 @@ dependencies:
   flutter_slidable: ^3.0.1
   auto_size_text: ^3.0.0
 
+  fade_out_particle:
+    path: packages/fade_out_particle
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

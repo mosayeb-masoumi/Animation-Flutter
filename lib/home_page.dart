@@ -26,6 +26,7 @@ import 'package:flutter_animation/draggable_scrollable_sheet.dart';
 import 'package:flutter_animation/dropdown_button_page/dropdown_button_page.dart';
 import 'package:flutter_animation/expandable_text.dart';
 import 'package:flutter_animation/fade_in_out.dart';
+import 'package:flutter_animation/fade_out_particle_screen.dart';
 import 'package:flutter_animation/flip_card_page.dart';
 import 'package:flutter_animation/flutter_slidable_screen.dart';
 import 'package:flutter_animation/glassmorphism_page.dart';
@@ -762,8 +763,19 @@ class _HomePageState extends State<HomePage> {
                               builder: (context) => const FlutterSlidableScreen()),
                         );
                       },
-                      child: Text("FlutterSlidableexample")),
+                      child: Text("FlutterSlidableExample")),
 
+
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FadeOutParticleScreen()),
+                        );
+                      },
+                      child: Text("FadeOutParticleExample")),
 
 
 
