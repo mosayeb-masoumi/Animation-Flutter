@@ -27,6 +27,7 @@ import 'package:flutter_animation/dropdown_button_page/dropdown_button_page.dart
 import 'package:flutter_animation/expandable_text.dart';
 import 'package:flutter_animation/fade_in_out.dart';
 import 'package:flutter_animation/flip_card_page.dart';
+import 'package:flutter_animation/flutter_slidable_screen.dart';
 import 'package:flutter_animation/glassmorphism_page.dart';
 import 'package:flutter_animation/grid_tile_page.dart';
 import 'package:flutter_animation/hero_transition_animation_page.dart';
@@ -752,6 +753,16 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Text("DataPickerExample")),
 
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FlutterSlidableScreen()),
+                        );
+                      },
+                      child: Text("FlutterSlidableexample")),
 
 
 
