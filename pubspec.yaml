@@ -98,8 +98,20 @@ dependencies:
   flutter_slidable: ^3.0.1
   auto_size_text: ^3.0.0
 
+#  persian_datetime_picker: ^2.6.0
+  persian_number_utility: ^1.1.4
+
+
   fade_out_particle:
     path: packages/fade_out_particle
+
+  persian_datetime_picker:
+    path: packages/persian-datetime-picker
+
+  flutter_localization: ^0.2.0
+  solar_datepicker:
+    path: packages/solar_datepicker
+
 
 dev_dependencies:
   flutter_test:

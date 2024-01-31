@@ -49,6 +49,7 @@ import 'package:flutter_animation/shimmer_image_cache.dart';
 import 'package:flutter_animation/slide_switcher_pahe.dart';
 import 'package:flutter_animation/slider_page.dart';
 import 'package:flutter_animation/sliver_tabbar.dart';
+import 'package:flutter_animation/solar_date_picker_screen.dart';
 import 'package:flutter_animation/star_menu.dart';
 import 'package:flutter_animation/stepper_page.dart';
 import 'package:flutter_animation/sticky_headers_example.dart';
@@ -776,6 +777,19 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("FadeOutParticleExample")),
+
+
+
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SolarDatePickerScreen()),
+                        );
+                      },
+                      child: Text("SolarDatePickerScreen")),
 
 
 
