@@ -1,3 +1,6 @@
+import 'package:persian_number_utility/persian_number_utility.dart';
+import 'package:shamsi_date/shamsi_date.dart';
+
 const String yyyy = 'yyyy'; // 4 عدد سال
 
 const String yy = 'yy'; // 2 عدد سال
@@ -55,6 +58,7 @@ class SolarDate {
       _defaultFormat = format;
     }
 
+
     _getNow = _now();
     _getDate = _now();
   }
@@ -71,10 +75,15 @@ class SolarDate {
 
     if (gregorian != null) {
       now = DateTime.parse(gregorian);
-      final List<int> solarDate =
-          gregorianToSolar(now.year, now.month, now.day);
+      final List<int> solarDate = gregorianToSolar(now.year, now.month, now.day);
+
+      Gregorian g1 = Gregorian(now.year, now.month, now.day);
+      Jalali j1 = g1.toJalali();
+
+
       setWeekday = now.weekday;
-      setYear = solarDate[0];
+      // setYear = solarDate[0];
+      setYear = j1.year;
       setMonth = solarDate[1];
       setDay = solarDate[2];
       setHour = now.hour;

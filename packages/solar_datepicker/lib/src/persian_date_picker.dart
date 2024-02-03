@@ -29,7 +29,7 @@ enum SolarDatePickerMode {
   year,
 }
 
-const Duration _kMonthScrollDuration = Duration(milliseconds: 200);
+const Duration _kMonthScrollDuration = Duration(milliseconds: 150);
 const double _kDayPickerRowHeight = 42;
 const int _kMaxDayPickerRowCount = 6; // A 31 day month that starts on Saturday.
 // Two extra rows: one for the day-of-week header and one for the month header.
@@ -501,9 +501,11 @@ class SolarDayPicker extends StatelessWidget {
           // The selected day gets a circle background highlight, and a contrasting text color.
           itemStyle = themeData.textTheme.bodyLarge?.copyWith(
             color: themeData.colorScheme.onSecondary,
+            // color: Colors.green,
           );
           decoration = BoxDecoration(
-            color: themeData.colorScheme.secondary,
+            // color: themeData.colorScheme.secondary,
+            color: Colors.green,
             shape: BoxShape.circle,
           );
         } else if (disabled) {
@@ -565,6 +567,7 @@ class SolarDayPicker extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
+            color: Colors.red,
             height: _kDayPickerRowHeight,
             child: Center(
               child: ExcludeSemantics(
@@ -580,8 +583,7 @@ class SolarDayPicker extends StatelessWidget {
           Flexible(
             child: GridView.custom(
               gridDelegate: _kDayPickerGridDelegate,
-              childrenDelegate:
-                  SliverChildListDelegate(labels, addRepaintBoundaries: false),
+              childrenDelegate: SliverChildListDelegate(labels, addRepaintBoundaries: false),
               padding: EdgeInsets.zero,
             ),
           ),
@@ -679,7 +681,7 @@ class _SolarMonthPickerState extends State<SolarMonthPicker>
 
     // Setup the fade animation for chevrons
     _chevronOpacityController = AnimationController(
-      duration: const Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 150),
       vsync: this,
     );
     _chevronOpacityAnimation =
@@ -875,13 +877,16 @@ class _SolarMonthPickerState extends State<SolarMonthPicker>
                 sortKey: _MonthPickerSortKey.previousMonth,
                 child: FadeTransition(
                   opacity: _chevronOpacityAnimation,
-                  child: IconButton(
-                    icon: const Icon(Icons.chevron_left),
-                    tooltip: _isDisplayingFirstMonth
-                        ? null
-                        : '${localizations.previousMonthTooltip} ${localizations.formatMonthYear(_previousMonthDate)}',
-                    onPressed:
-                        _isDisplayingFirstMonth ? null : _handlePreviousMonth,
+                  child: Container(
+                    color: Colors.yellow,
+                    child: IconButton(
+                      icon: const Icon(Icons.chevron_left),
+                      tooltip: _isDisplayingFirstMonth
+                          ? null
+                          : '${localizations.previousMonthTooltip} ${localizations.formatMonthYear(_previousMonthDate)}',
+                      onPressed:
+                          _isDisplayingFirstMonth ? null : _handlePreviousMonth,
+                    ),
                   ),
                 ),
               ),
@@ -893,12 +898,15 @@ class _SolarMonthPickerState extends State<SolarMonthPicker>
                 sortKey: _MonthPickerSortKey.nextMonth,
                 child: FadeTransition(
                   opacity: _chevronOpacityAnimation,
-                  child: IconButton(
-                    icon: const Icon(Icons.chevron_right),
-                    tooltip: _isDisplayingLastMonth
-                        ? null
-                        : '${localizations.nextMonthTooltip} ${localizations.formatMonthYear(_nextMonthDate)}',
-                    onPressed: _isDisplayingLastMonth ? null : _handleNextMonth,
+                  child: Container(
+                    color: Colors.yellow,
+                    child: IconButton(
+                      icon: const Icon(Icons.chevron_right),
+                      tooltip: _isDisplayingLastMonth
+                          ? null
+                          : '${localizations.nextMonthTooltip} ${localizations.formatMonthYear(_nextMonthDate)}',
+                      onPressed: _isDisplayingLastMonth ? null : _handleNextMonth,
+                    ),
                   ),
                 ),
               ),
@@ -1182,13 +1190,30 @@ class _DatePickerDialogState extends State<_DatePickerDialog> {
     final picker = _buildPicker();
     final Widget actions = ButtonBar(
       children: <Widget>[
-        TextButton(
-          onPressed: _handleCancel,
-          child: Text(localizations.cancelButtonLabel),
+        Container(
+          margin: EdgeInsets.all(2),
+          decoration: BoxDecoration(
+              color: Colors.pink,
+            shape: BoxShape.circle
+          ),
+
+          child: TextButton(
+            onPressed: _handleCancel,
+            // child: Text(localizations.cancelButtonLabel),
+            child: Text("لغو"),
+          ),
         ),
-        TextButton(
-          onPressed: _handleOk,
-          child: Text(localizations.okButtonLabel),
+        Container(
+          margin: EdgeInsets.all(2),
+          decoration: BoxDecoration(
+              color: Colors.pink,
+              shape: BoxShape.circle
+          ),
+          child: TextButton(
+            onPressed: _handleOk,
+            // child: Text(localizations.okButtonLabel),
+            child: Text("تایید"),
+          ),
         ),
       ],
     );
