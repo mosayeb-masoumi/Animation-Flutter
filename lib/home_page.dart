@@ -37,6 +37,7 @@ import 'package:flutter_animation/interactive_viewer_pahe.dart';
 import 'package:flutter_animation/layout_builder_portrait_landscape.dart';
 import 'package:flutter_animation/like_button_page.dart';
 import 'package:flutter_animation/liquid_pull_to_refresh.dart';
+import 'package:flutter_animation/loading_animation.dart';
 import 'package:flutter_animation/moving_border_color.dart';
 import 'package:flutter_animation/neomorphism/nepmorphism_page.dart';
 import 'package:flutter_animation/pin_code_fields_example.dart';
@@ -791,6 +792,17 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Text("SolarDatePickerScreen")),
 
+
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoadingAnimationExample()),
+                        );
+                      },
+                      child: Text("LoadingAnimationExample")),
 
 
                 ],

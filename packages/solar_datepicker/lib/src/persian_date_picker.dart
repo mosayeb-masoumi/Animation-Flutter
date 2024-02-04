@@ -501,7 +501,6 @@ class SolarDayPicker extends StatelessWidget {
           // The selected day gets a circle background highlight, and a contrasting text color.
           itemStyle = themeData.textTheme.bodyLarge?.copyWith(
             color: themeData.colorScheme.onSecondary,
-            // color: Colors.green,
           );
           decoration = BoxDecoration(
             // color: themeData.colorScheme.secondary,

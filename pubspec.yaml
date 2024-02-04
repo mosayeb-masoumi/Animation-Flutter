@@ -101,6 +101,12 @@ dependencies:
 #  persian_datetime_picker: ^2.6.0
   persian_number_utility: ^1.1.4
 
+  logger: ^2.0.2+1
+
+  loading_animation_widget: ^1.2.0+4
+
+  loading_animations: ^2.2.0
+
 
   fade_out_particle:
     path: packages/fade_out_particle

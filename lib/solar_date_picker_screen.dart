@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:logger/logger.dart';
 import 'package:solar_datepicker/solar_datepicker.dart';
 
 class SolarDatePickerScreen extends StatefulWidget {
@@ -46,6 +47,24 @@ class _ISolarDatePickerScreenState extends State<ISolarDatePickerScreen> {
     }
     final f = Jalali.fromDateTime(pickedDate!).formatter;
     return '${f.yyyy}/${f.mm}/${f.dd}';
+  }
+
+  var logger = Logger();
+
+  @override
+  void initState() {
+    super.initState();
+    logger.t("Trace log");
+
+    logger.d("Debug log");
+
+    logger.i("Info log");
+
+    logger.w("Warning log");
+
+    logger.e("Error log", error: 'Test Error');
+
+    logger.f("What a fatal log", error: "error", stackTrace: StackTrace.current);
   }
 
   @override

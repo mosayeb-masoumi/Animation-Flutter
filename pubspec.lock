@@ -404,6 +404,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
+  loading_animation_widget:
+    dependency: "direct main"
+    description:
+      name: loading_animation_widget
+      sha256: "1901682600273a966c34cf44a85fc5355da92a8d08a8a43c11adc4e471993e3a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0+4"
+  loading_animations:
+    dependency: "direct main"
+    description:
+      name: loading_animations
+      sha256: c62a8c1fbbe5ade3ac2814128a9aa92ee784756b11ad9e6a915b673b90005cc8
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.0"
+  logger:
+    dependency: "direct main"
+    description:
+      name: logger
+      sha256: "6bbb9d6f7056729537a4309bda2e74e18e5d9f14302489cc1e93f33b3fe32cac"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2+1"
   matcher:
     dependency: transitive
     description:
@@ -524,13 +548,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
-  persian_datetime_picker:
-    dependency: "direct main"
-    description:
-      path: "packages/persian-datetime-picker"
-      relative: true
-    source: path
-    version: "2.6.0"
   persian_number_utility:
     dependency: "direct main"
     description:
