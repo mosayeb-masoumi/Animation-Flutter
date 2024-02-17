@@ -12,6 +12,7 @@ import 'package:flutter_animation/badges_page.dart';
 import 'package:flutter_animation/banner-example.dart';
 import 'package:flutter_animation/chart/chart_page.dart';
 import 'package:flutter_animation/checkbox_listtile.dart';
+import 'package:flutter_animation/circle_list_menu_page.dart';
 import 'package:flutter_animation/circle_menu_page.dart';
 import 'package:flutter_animation/clipper/clipper_example.dart';
 import 'package:flutter_animation/container_transformation_page.dart';
@@ -97,40 +98,20 @@ class _HomePageState extends State<HomePage> {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  const AnimatedContainerPage()),
+                                  const AnimatedToggleSwitchPage()),
                         );
                       },
-                      child: Text("Animated container page")),
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ContainerTransformationPage()),
-                        );
-                      },
-                      child: Text("Container transformation Page")),
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AnimateTextKitPage()),
-                        );
-                      },
-                      child: Text("Text kit animation")),
+                      child: Text("AnimatedToggleSwitchPage")),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  const DayNightTimePickerPage()),
+                                  const AnimatedContainerPage()),
                         );
                       },
-                      child: Text("Day night time picker")),
+                      child: Text("Animated container page")),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -145,84 +126,11 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const FlipCardPage()),
-                        );
-                      },
-                      child: Text("Flip card")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const CreditCardPage()),
-                        );
-                      },
-                      child: Text("Credit card")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const CircleMenuPage()),
-                        );
-                      },
-                      child: Text("Circle Menu")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DelayDisplayPage()),
-                        );
-                      },
-                      child: Text("Delay Display")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LikeButtonPage()),
-                        );
-                      },
-                      child: Text("Like button")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const TransitionPage()),
-                        );
-                      },
-                      child: Text("Transition")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const HeroTransitionAnimationPage()),
-                        );
-                      },
-                      child: Text("Hero Transition Animation Page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
                               builder: (context) =>
                                   const AnimateSizeFadePage()),
                         );
                       },
                       child: Text("Animate size and fade")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ExpandableTextPage(),
-                            ));
-                      },
-                      child: Text("Expandable text")),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -237,176 +145,11 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const StarMenuPage()),
-                        );
-                      },
-                      child: Text("Star menu")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const TweenAnimationPage()),
-                        );
-                      },
-                      child: Text("Tween Animation")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
                               builder: (context) =>
                                   const AnimatedCrossFadePage()),
                         );
                       },
                       child: Text("animatyed CrossFade")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const FadeInOut()),
-                        );
-                      },
-                      child: Text("Fade in/out")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ToastPage()),
-                        );
-                      },
-                      child: Text("Toast page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const ToastSwapDismissablePage()),
-                        );
-                      },
-                      child: Text("Toast swap dismissable page")),
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DottedBorderPage()),
-                        );
-                      },
-                      child: Text("Dotted border")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const DashRotateBorderProfile()),
-                        );
-                      },
-                      child: Text("Dotted Rotate border")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MovingColorPage()),
-                        );
-                      },
-                      child: Text("Moving Color Border")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => BannerPage()),
-                        );
-                      },
-                      child: Text("Material Banner")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LongPressDraggablePage()),
-                        );
-                      },
-                      child: Text("Long press draggable")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => InteractiveViewerPage()),
-                        );
-                      },
-                      child: Text("Interactive Viewer")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ReorderableListViewPage()),
-                        );
-                      },
-                      child: Text("Reorderable ListView Page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CheckboxListTilePage()),
-                        );
-                      },
-                      child: Text("Checkbox ListTile Page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CupertinoContextMenuPage()),
-                        );
-                      },
-                      child: Text("Cupertino context Menu Page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => TablePage()),
-                        );
-                      },
-                      child: Text("Table Page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  DismissableListItemSwipeLeftPage()),
-                        );
-                      },
-                      child: Text("Dismissable ListItem Swipe Left Page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  DraggableScrollableSheetPage()),
-                        );
-                      },
-                      child: Text("Draggable Scrollable Sheet Page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => PopupMenuItemPage()),
-                        );
-                      },
-                      child: Text("Popup Menu Item Page")),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -440,279 +183,84 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => GridTilePage()),
-                        );
-                      },
-                      child: Text("Grid Tile Page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => IndexedStackPage()),
-                        );
-                      },
-                      child: Text("Indexed Stack Page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => StepperPage()),
-                        );
-                      },
-                      child: Text("Stepper Page")),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => PositionedScreen()),
-                        );
-                      },
-                      child: Text("Positioned Screen")),
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => RadioListTilePage()),
-                        );
-                      },
-                      child: Text("RadioListTile Page")),
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => RefreshIndicatorPage()),
-                        );
-                      },
-                      child: Text("Refresh Indicator Page")),
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => SliderPage()),
-                        );
-                      },
-                      child: Text("Slider Page")),
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => WrapChipPage()),
-                        );
-                      },
-                      child: Text("Wrap Chip Page")),
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LayoutBuilderPortraitLandscape()),
-                        );
-                      },
-                      child: Text("LayoutBuilder Portrait Landscape")),
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ExpansionTilePage()),
-                        );
-                      },
-                      child: Text("ExpansionTile Page")),
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CuportinoSlidingSegmentedConrtolPage()),
-                        );
-                      },
-                      child: Text("Cuportino Sliding Segmented Conrtol Page")),
-
-
-                  // ElevatedButton(
-                  //     onPressed: () {
-                  //       Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(
-                  //             builder: (context) => NeomorphismPage()),
-                  //       );
-                  //     },
-                  //     child: Text("Neomorphism Page")),
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => GlassmorphismPage()),
-                        );
-                      },
-                      child: Text("Glassmorphism Page")),
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => BadgesPage()),
-                        );
-                      },
-                      child: Text("Badges Page")),
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => SliverTabbar()),
-                        );
-                      },
-                      child: Text("Sliver_Tabbar Page")),
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => DropDownButtonPage()),
-                        );
-                      },
-                      child: Text("DropDown Button Page")),
-
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ChartPage()),
-                        );
-                      },
-                      child: Text("Chart Page")),
-
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LiquidPullToRefreshPage()),
-                        );
-                      },
-                      child: Text("Liquid Pull To Refresh Page")),
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ShimmerImageCacheScreen()),
-                        );
-                      },
-                      child: Text("Shimmer Image Cache Page")),
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const VirtualKeyboard()),
-                        );
-                      },
-                      child: Text("Virtual Keyboard page")),
-
-
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
                               builder: (context) => const BackDropFilter1()),
                         );
                       },
                       child: Text("BackDropFilter1")),
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => const ClipperExample()),
+                          MaterialPageRoute(builder: (context) => BadgesPage()),
                         );
                       },
-                      child: Text("ClipperExample")),
-
-
+                      child: Text("Badges Page")),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const MatrixTransitionExample()),
+                              builder: (context) =>
+                                  ContainerTransformationPage()),
                         );
                       },
-                      child: Text("MatrixTransition")),
-
-
-
+                      child: Text("Container transformation Page")),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const CustomScrollViewExamples()),
+                              builder: (context) =>
+                                  const CustomScrollViewExamples()),
                         );
                       },
                       child: Text("CustomScrollViewExamples")),
-
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const StickyHeadersExamples()),
+                              builder: (context) =>
+                                  CuportinoSlidingSegmentedConrtolPage()),
                         );
                       },
-                      child: Text("StickyHeadersExamples")),
-
-
+                      child: Text("Cuportino Sliding Segmented Conrtol Page")),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const PinCodeFieldsExample()),
+                              builder: (context) => CheckboxListTilePage()),
                         );
                       },
-                      child: Text("PinCodeFieldsExamples")),
-
-
+                      child: Text("Checkbox ListTile Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CupertinoContextMenuPage()),
+                        );
+                      },
+                      child: Text("Cupertino context Menu Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CreditCardPage()),
+                        );
+                      },
+                      child: Text("Credit card")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CircleMenuPage()),
+                        );
+                      },
+                      child: Text("Circle Menu")),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -729,23 +277,76 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SlideSwitcherPage()),
+                              builder: (context) => const CircleListMenuPage()),
                         );
                       },
-                      child: Text("SlideSwitcherPage")),
-
+                      child: Text("CircleListMenuPage")),
 
 
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => const AnimatedToggleSwitchPage()),
+                          MaterialPageRoute(builder: (context) => ChartPage()),
                         );
                       },
-                      child: Text("AnimatedToggleSwitchPage")),
-
+                      child: Text("Chart Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ClipperExample()),
+                        );
+                      },
+                      child: Text("ClipperExample")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DropDownButtonPage()),
+                        );
+                      },
+                      child: Text("DropDown Button Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const DayNightTimePickerPage()),
+                        );
+                      },
+                      child: Text("Day night time picker")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DelayDisplayPage()),
+                        );
+                      },
+                      child: Text("Delay Display")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DottedBorderPage()),
+                        );
+                      },
+                      child: Text("Dotted border")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const DashRotateBorderProfile()),
+                        );
+                      },
+                      child: Text("Dotted Rotate border")),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -755,56 +356,404 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("DataPickerExample")),
-
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const FlutterSlidableScreen()),
+                              builder: (context) =>
+                                  DismissableListItemSwipeLeftPage()),
+                        );
+                      },
+                      child: Text("Dismissable ListItem Swipe Left Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  DraggableScrollableSheetPage()),
+                        );
+                      },
+                      child: Text("Draggable Scrollable Sheet Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ExpandableTextPage(),
+                            ));
+                      },
+                      child: Text("Expandable text")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ExpansionTilePage()),
+                        );
+                      },
+                      child: Text("ExpansionTile Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const FlutterSlidableScreen()),
                         );
                       },
                       child: Text("FlutterSlidableExample")),
-
-
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const FadeOutParticleScreen()),
+                              builder: (context) =>
+                                  const FadeOutParticleScreen()),
                         );
                       },
                       child: Text("FadeOutParticleExample")),
-
-
-
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SolarDatePickerScreen()),
+                              builder: (context) => const FlipCardPage()),
                         );
                       },
-                      child: Text("SolarDatePickerScreen")),
-
-
-
+                      child: Text("Flip card")),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LoadingAnimationExample()),
+                              builder: (context) => const FadeInOut()),
+                        );
+                      },
+                      child: Text("Fade in/out")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GlassmorphismPage()),
+                        );
+                      },
+                      child: Text("Glassmorphism Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GridTilePage()),
+                        );
+                      },
+                      child: Text("Grid Tile Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const HeroTransitionAnimationPage()),
+                        );
+                      },
+                      child: Text("Hero Transition Animation Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => InteractiveViewerPage()),
+                        );
+                      },
+                      child: Text("Interactive Viewer")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => IndexedStackPage()),
+                        );
+                      },
+                      child: Text("Indexed Stack Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const LoadingAnimationExample()),
                         );
                       },
                       child: Text("LoadingAnimationExample")),
-
-
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LikeButtonPage()),
+                        );
+                      },
+                      child: Text("Like button")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LongPressDraggablePage()),
+                        );
+                      },
+                      child: Text("Long press draggable")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const LiquidPullToRefreshPage()),
+                        );
+                      },
+                      child: Text("Liquid Pull To Refresh Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MovingColorPage()),
+                        );
+                      },
+                      child: Text("Moving Color Border")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => BannerPage()),
+                        );
+                      },
+                      child: Text("Material Banner")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const MatrixTransitionExample()),
+                        );
+                      },
+                      child: Text("MatrixTransition")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  LayoutBuilderPortraitLandscape()),
+                        );
+                      },
+                      child: Text("LayoutBuilder Portrait Landscape")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const PinCodeFieldsExample()),
+                        );
+                      },
+                      child: Text("PinCodeFieldsExamples")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PopupMenuItemPage()),
+                        );
+                      },
+                      child: Text("Popup Menu Item Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PositionedScreen()),
+                        );
+                      },
+                      child: Text("Positioned Screen")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RadioListTilePage()),
+                        );
+                      },
+                      child: Text("RadioListTile Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ReorderableListViewPage()),
+                        );
+                      },
+                      child: Text("Reorderable ListView Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RefreshIndicatorPage()),
+                        );
+                      },
+                      child: Text("Refresh Indicator Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const StickyHeadersExamples()),
+                        );
+                      },
+                      child: Text("StickyHeadersExamples")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SlideSwitcherPage()),
+                        );
+                      },
+                      child: Text("SlideSwitcherPage")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const SolarDatePickerScreen()),
+                        );
+                      },
+                      child: Text("SolarDatePickerScreen")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const StarMenuPage()),
+                        );
+                      },
+                      child: Text("Star menu")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => StepperPage()),
+                        );
+                      },
+                      child: Text("Stepper Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SliderPage()),
+                        );
+                      },
+                      child: Text("Slider Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SliverTabbar()),
+                        );
+                      },
+                      child: Text("Sliver_Tabbar Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const ShimmerImageCacheScreen()),
+                        );
+                      },
+                      child: Text("Shimmer Image Cache Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AnimateTextKitPage()),
+                        );
+                      },
+                      child: Text("Text kit animation")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const TransitionPage()),
+                        );
+                      },
+                      child: Text("Transition")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const TweenAnimationPage()),
+                        );
+                      },
+                      child: Text("Tween Animation")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ToastPage()),
+                        );
+                      },
+                      child: Text("Toast page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const ToastSwapDismissablePage()),
+                        );
+                      },
+                      child: Text("Toast swap dismissable page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => TablePage()),
+                        );
+                      },
+                      child: Text("Table Page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const VirtualKeyboard()),
+                        );
+                      },
+                      child: Text("Virtual Keyboard page")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => WrapChipPage()),
+                        );
+                      },
+                      child: Text("Wrap Chip Page")),
                 ],
               ),
             ),
