@@ -47,6 +47,7 @@ import 'package:flutter_animation/positioned_screen.dart';
 import 'package:flutter_animation/radio_list_tile_page.dart';
 import 'package:flutter_animation/refresh_indicatior_page.dart';
 import 'package:flutter_animation/reorderable_listview_page.dart';
+import 'package:flutter_animation/shake_textfield_screen.dart';
 import 'package:flutter_animation/shimmer_image_cache.dart';
 import 'package:flutter_animation/slide_switcher_pahe.dart';
 import 'package:flutter_animation/slider_page.dart';
@@ -682,6 +683,19 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Shimmer Image Cache Page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                              const ShakeTextFieldScreen()),
+                        );
+                      },
+                      child: Text("Shake TextField Page")),
+
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
