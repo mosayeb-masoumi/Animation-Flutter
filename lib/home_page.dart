@@ -44,6 +44,7 @@ import 'package:flutter_animation/neomorphism/nepmorphism_page.dart';
 import 'package:flutter_animation/pin_code_fields_example.dart';
 import 'package:flutter_animation/popup_menu_item.dart';
 import 'package:flutter_animation/positioned_screen.dart';
+import 'package:flutter_animation/radial_guage_screen.dart';
 import 'package:flutter_animation/radio_list_tile_page.dart';
 import 'package:flutter_animation/refresh_indicatior_page.dart';
 import 'package:flutter_animation/reorderable_listview_page.dart';
@@ -609,6 +610,18 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Refresh Indicator Page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RadialGaugeScreen()),
+                        );
+                      },
+                      child: Text("Radial Gauge Screen")),
+
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
