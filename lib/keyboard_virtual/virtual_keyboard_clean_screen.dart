@@ -8,7 +8,8 @@ class VirtualKeyboardCleanScreen extends StatefulWidget {
       _VirtualKeyboardCleanScreenState();
 }
 
-class _VirtualKeyboardCleanScreenState extends State<VirtualKeyboardCleanScreen> {
+class _VirtualKeyboardCleanScreenState
+    extends State<VirtualKeyboardCleanScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
@@ -38,7 +39,7 @@ class _VirtualKeyboardCleanScreenState extends State<VirtualKeyboardCleanScreen>
                 },
                 obscureResult: true,
                 showDivider: true,
-                dividerColor: Colors.blue,
+                // dividerColor: Colors.red,
                 textStyle: const TextStyle(
                     color: Colors.black,
                     fontSize: 15,
@@ -93,8 +94,12 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
     return Column(
       children: [
         Visibility(
-          visible: widget.showResult! ,
-          child:Text(widget.obscureResult == true ? obscureString(resultNumber):resultNumber, style: widget.resultTextStyle),
+          visible: widget.showResult!,
+          child: Text(
+              widget.obscureResult == true
+                  ? obscureString(resultNumber)
+                  : resultNumber,
+              style: widget.resultTextStyle),
         ),
         const SizedBox(
           height: 10.0,
@@ -110,22 +115,23 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
             child: Column(
               children: [
                 Expanded(
-                    child: buildRow("7", "8", "9", size)),
+                    child: buildRow("7", "8", "9", size, widget.dividerColor)),
                 (widget.showDivider == null || widget.showDivider == true)
-                    ? buildHorizontalDivider(size)
+                    ? buildHorizontalDivider(size, widget.dividerColor)
                     : const SizedBox.shrink(),
                 Expanded(
-                    child: buildRow("4", "5", "6", size)),
+                    child: buildRow("4", "5", "6", size, widget.dividerColor)),
                 (widget.showDivider == null || widget.showDivider == true)
-                    ? buildHorizontalDivider(size)
+                    ? buildHorizontalDivider(size, widget.dividerColor)
                     : const SizedBox.shrink(),
                 Expanded(
-                    child: buildRow("1", "2", "3", size)),
+                    child: buildRow("1", "2", "3", size, widget.dividerColor)),
                 (widget.showDivider == null || widget.showDivider == true)
-                    ? buildHorizontalDivider(size)
+                    ? buildHorizontalDivider(size, widget.dividerColor)
                     : const SizedBox.shrink(),
                 Expanded(
-                    child: buildRow("Reset", "0", "Back", size))
+                    child: buildRow(
+                        "Reset", "0", "Back", size, widget.dividerColor))
               ],
             ),
           ),
@@ -135,7 +141,7 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
   }
 
   Widget buildRow(String leftNumber, String middleNumber, String rightNumber,
-      Size size) {
+      Size size, Color? dividerColor) {
     return Row(
       children: [
         //left number
@@ -169,10 +175,10 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
         Visibility(
           visible: (widget.showDivider == null || widget.showDivider == true),
           child: leftNumber == "7"
-              ? buildTopDivider(size)
+              ? buildTopDivider(size, widget.dividerColor)
               : (leftNumber == "4" || leftNumber == "1")
-                  ? buildMiddleDivider(size)
-                  : buildBottomDivider(size),
+                  ? buildMiddleDivider(size, widget.dividerColor)
+                  : buildBottomDivider(size, widget.dividerColor),
         ),
 
         // middle number
@@ -200,10 +206,10 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
         Visibility(
           visible: (widget.showDivider == null || widget.showDivider!),
           child: leftNumber == "7"
-              ? buildTopDivider(size)
+              ? buildTopDivider(size, widget.dividerColor)
               : (leftNumber == "4" || leftNumber == "1")
-                  ? buildMiddleDivider(size)
-                  : buildBottomDivider(size),
+                  ? buildMiddleDivider(size, widget.dividerColor)
+                  : buildBottomDivider(size, widget.dividerColor),
         ),
 
         //right number
@@ -240,72 +246,78 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
     );
   }
 
-  Widget buildHorizontalDivider(Size size) {
+  Widget buildHorizontalDivider(Size size, Color? dividerColor) {
     return Container(
       width: size.width,
       height: 1,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.centerLeft,
-          end: Alignment.centerRight,
-          colors: [
-            Colors.white10,
-            Colors.black12,
-            Colors.black26,
-            Colors.black26,
-            Colors.black26,
-            Colors.black26,
-            Colors.black12,
-            Colors.white10,
-          ],
-        ),
-      ),
+      decoration: BoxDecoration(
+          gradient: dividerColor == null
+              ? LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                    Colors.white10,
+                    Colors.black12,
+                    Colors.black26,
+                    Colors.black26,
+                    Colors.black26,
+                    Colors.black26,
+                    Colors.black12,
+                    Colors.white10,
+                  ],
+                )
+              : null,
+          color: dividerColor != null ? dividerColor : null),
     );
   }
 
-  Widget buildTopDivider(Size size) {
+  Widget buildTopDivider(Size size, Color? dividerColor) {
     return Container(
       width: 1,
       height: size.height,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            Colors.white10,
-            Colors.black12,
-            Colors.black26,
-            Colors.black26,
-          ],
-        ),
-      ),
+      decoration: BoxDecoration(
+          gradient: dividerColor == null
+              ? LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.white10,
+                    Colors.black12,
+                    Colors.black26,
+                    Colors.black26,
+                  ],
+                )
+              : null,
+          color: dividerColor),
     );
   }
 
-  Widget buildBottomDivider(Size size) {
+  Widget buildBottomDivider(Size size, Color? dividerColor) {
     return Container(
       width: 1,
       height: size.height,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.bottomCenter,
-          end: Alignment.topCenter,
-          colors: [
-            Colors.white10,
-            Colors.black12,
-            Colors.black26,
-            Colors.black26,
-          ],
-        ),
-      ),
+      decoration: BoxDecoration(
+          gradient: dividerColor == null
+              ? LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [
+                    Colors.white10,
+                    Colors.black12,
+                    Colors.black26,
+                    Colors.black26,
+                  ],
+                )
+              : null,
+          color: dividerColor),
     );
   }
 
-  Widget buildMiddleDivider(Size size) {
+  Widget buildMiddleDivider(Size size, Color? dividerColor) {
     return Container(
       width: 1,
       height: size.height,
-      color: Colors.black26,
+      color: dividerColor ?? Colors.black26,
     );
   }
 
