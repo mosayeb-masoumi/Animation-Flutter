@@ -35,6 +35,7 @@ import 'package:flutter_animation/grid_tile_page.dart';
 import 'package:flutter_animation/hero_transition_animation_page.dart';
 import 'package:flutter_animation/indexed_stack_page.dart';
 import 'package:flutter_animation/interactive_viewer_pahe.dart';
+import 'package:flutter_animation/keyboard_virtual/virtual_keyboard_clean_screen.dart';
 import 'package:flutter_animation/layout_builder_portrait_landscape.dart';
 import 'package:flutter_animation/like_button_page.dart';
 import 'package:flutter_animation/liquid_pull_to_refresh.dart';
@@ -772,6 +773,19 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Virtual Keyboard page")),
+
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const  VirtualKeyboardCleanScreen()),
+                        );
+                      },
+                      child: Text("Virtual Keyboard clean page")),
+
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
