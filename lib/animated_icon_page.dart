@@ -9,54 +9,111 @@ class AnimatedIconPage extends StatefulWidget {
 
 class _AnimatedIconPageState extends State<AnimatedIconPage>
     with TickerProviderStateMixin {
-  bool _isPaly = false;
-  late AnimationController _controller;
+
+  bool isPlaying = false;
+  late Animation animation;
+  late AnimationController controller;
 
   @override
   void initState() {
-    _controller =
-        AnimationController(duration: Duration(milliseconds: 500), vsync: this);
     super.initState();
+    controller = AnimationController(
+        duration: const Duration(milliseconds: 500),
+        vsync: this);
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    controller.dispose();
     super.dispose();
+  }
+
+  _onPressed(){
+    setState(() {
+      isPlaying = !isPlaying;
+
+      isPlaying ? controller.forward() : controller.reverse();
+    });
   }
 
   @override
   Widget build(BuildContext context) {
+    Size size= MediaQuery.sizeOf(context);
     return Scaffold(
-      body: SafeArea(
-          child: Center(
-        child: GestureDetector(
-          onTap: () {
-            if (_isPaly == false) {
-              _controller.forward();
-              _isPaly = true;
-              // setState(() {
-              //   _isPaly = true;
-              // });
+      appBar: AppBar(title: Text("Animation icon"),),
+      body: SizedBox(
+        width: size.width,
+        height: size.height,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.add_event, progress: controller),
+              ),
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.arrow_menu, progress: controller),
+              ),
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.close_menu, progress: controller),
+              ),
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.ellipsis_search, progress: controller),
+              ),
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.event_add, progress: controller),
+              ),
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.home_menu, progress: controller),
+              ),
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.list_view, progress: controller),
+              ),
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.menu_arrow, progress: controller),
+              ),
 
-            } else {
-              _controller.reverse();
-              _isPaly = false;
-              // setState(() {
-              //   _isPaly = false;
-              // });
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.menu_close, progress: controller),
+              ),
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.menu_home, progress: controller),
+              ),
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.pause_play, progress: controller),
+              ),
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.play_pause, progress: controller),
+              ),
 
-            }
-          },
-          child: AnimatedIcon(
-            icon: AnimatedIcons.pause_play,
-            // icon: AnimatedIcons.menu_home,
-            color: _isPaly ? Colors.green : Colors.red,
-            progress: _controller,
-            size: 100,
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.search_ellipsis, progress: controller),
+              ),
+              IconButton(
+                onPressed: _onPressed,
+                icon: AnimatedIcon(icon: AnimatedIcons.view_list, progress: controller),
+              ),
+
+
+
+            ],
           ),
         ),
-      )),
+      ),
     );
   }
 }

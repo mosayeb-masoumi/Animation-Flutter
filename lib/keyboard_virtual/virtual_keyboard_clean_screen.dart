@@ -31,17 +31,25 @@ class _VirtualKeyboardCleanScreenState
                 height: 400,
                 showResult: true,
                 resultTextStyle: const TextStyle(
-                    color: Colors.red,
+                    color: Colors.black,
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
                 resultFunction: (value) {
                   print(value);
                 },
-                obscureResult: true,
+                obscureResult: false,
                 showDivider: true,
+                rightIconBack: const Icon(
+                  Icons.backspace,
+                  color: Colors.redAccent,
+                ),
+                showRightIcon: true,
+                leftIconReset: const Icon(Icons.refresh, color: Colors.redAccent,),
+                showLeftIcon: true,
+
                 // dividerColor: Colors.red,
-                textStyle: const TextStyle(
-                    color: Colors.black,
+                digitStyle: const TextStyle(
+                    color: Colors.green,
                     fontSize: 15,
                     fontWeight: FontWeight.bold),
                 backgroundColor: Colors.white,
@@ -61,10 +69,14 @@ class FlutterVirtualKeyboard extends StatefulWidget {
   final bool? obscureResult;
   final bool? showDivider;
   final Color? dividerColor;
-  final TextStyle? textStyle;
+  final TextStyle? digitStyle;
   final TextStyle? resultTextStyle;
   final Color? backgroundColor;
   final double? backgroundRadius;
+  final bool? showRightIcon;
+  final Icon? rightIconBack;
+  final Icon? leftIconReset;
+  final bool? showLeftIcon;
 
   const FlutterVirtualKeyboard({
     super.key,
@@ -75,10 +87,14 @@ class FlutterVirtualKeyboard extends StatefulWidget {
     this.obscureResult = false,
     this.showDivider = true,
     this.dividerColor,
-    this.textStyle,
+    this.digitStyle,
     this.resultTextStyle,
     this.backgroundColor,
     this.backgroundRadius,
+    this.showRightIcon,
+    this.rightIconBack,
+    this.leftIconReset,
+    this.showLeftIcon,
   });
 
   @override
@@ -99,7 +115,11 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
               widget.obscureResult == true
                   ? obscureString(resultNumber)
                   : resultNumber,
-              style: widget.resultTextStyle),
+              style: widget.resultTextStyle ??
+                  const TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold)),
         ),
         const SizedBox(
           height: 10.0,
@@ -146,30 +166,44 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
       children: [
         //left number
         Expanded(
-          flex: 1,
-          child: InkWell(
-            onTap: () {
-              if (leftNumber != "Reset") {
-                setState(() {
-                  resultNumber += leftNumber;
-                });
-              } else {
-                setState(() {
-                  resultNumber = "";
-                });
-              }
-              if (widget.resultFunction != null) {
-                widget.resultFunction!(resultNumber);
-              }
-            },
-            child: Center(
-              child: Text(
-                leftNumber,
-                style: widget.textStyle,
-              ),
-            ),
-          ),
-        ),
+            flex: 1,
+            child: InkWell(
+              onTap: () {
+                if (leftNumber != "Reset") {
+                  setState(() {
+                    resultNumber += leftNumber;
+                  });
+                } else {
+                  setState(() {
+                    resultNumber = "";
+                  });
+                }
+                if (widget.resultFunction != null) {
+                  widget.resultFunction!(resultNumber);
+                }
+              },
+
+              child: (leftNumber == "Reset")
+                  ? Visibility(
+                      visible: (widget.showLeftIcon == null ||
+                          widget.showLeftIcon == true),
+                      child: Center(
+                          child: widget.leftIconReset ??
+                              const Icon(Icons.refresh, color: Colors.black)),
+                    )
+                  : Center(
+                      child: Text(
+                        leftNumber,
+                        style: widget.digitStyle,
+                      ),
+                    ),
+              // child: Center(
+              //   child: Text(
+              //     leftNumber,
+              //     style: widget.textStyle,
+              //   ),
+              // ),
+            )),
 
         //divider
         Visibility(
@@ -196,7 +230,7 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
             child: Center(
               child: Text(
                 middleNumber,
-                style: widget.textStyle,
+                style: widget.digitStyle,
               ),
             ),
           ),
@@ -234,12 +268,20 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
                 widget.resultFunction!(resultNumber);
               }
             },
-            child: Center(
-              child: Text(
-                rightNumber,
-                style: widget.textStyle,
-              ),
-            ),
+            child: (rightNumber == "Back")
+                ? Visibility(
+                    visible: (widget.showRightIcon == null ||
+                        widget.showRightIcon == true),
+                    child: Center(
+                        child: widget.rightIconBack ??
+                            const Icon(Icons.backspace, color: Colors.black)),
+                  )
+                : Center(
+                    child: Text(
+                      rightNumber,
+                      style: widget.digitStyle,
+                    ),
+                  ),
           ),
         )
       ],
@@ -252,7 +294,7 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
       height: 1,
       decoration: BoxDecoration(
           gradient: dividerColor == null
-              ? LinearGradient(
+              ? const LinearGradient(
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
                   colors: [
@@ -267,7 +309,7 @@ class _FlutterVirtualKeyboardState extends State<FlutterVirtualKeyboard> {
                   ],
                 )
               : null,
-          color: dividerColor != null ? dividerColor : null),
+          color: dividerColor),
     );
   }
 
