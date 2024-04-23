@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
@@ -10,11 +9,7 @@ class FlutterSlidableScreen extends StatefulWidget {
 }
 
 class _FlutterSlidableScreenState extends State<FlutterSlidableScreen> {
-
-
-  void onPressed(){
-
-  }
+  void onPressed() {}
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +21,10 @@ class _FlutterSlidableScreenState extends State<FlutterSlidableScreen> {
         child: SafeArea(
           child: Column(
             children: [
-          
               Slidable(
                 // Specify a key if the Slidable is dismissible.
                 key: const ValueKey(0),
-          
+
                 // The start action pane is the one at the left or the top side.
                 startActionPane: ActionPane(
                   // A motion is a widget used to control how the pane animates.
@@ -39,9 +33,9 @@ class _FlutterSlidableScreenState extends State<FlutterSlidableScreen> {
                   dragDismissible: true,
                   // A pane can dismiss the Slidable.
                   dismissible: DismissiblePane(onDismissed: () {}),
-          
+
                   // All actions are defined in the children parameter.
-                  children:  [
+                  children: [
                     // A SlidableAction can have an icon and/or a label.
                     SlidableAction(
                       onPressed: (context) => onPressed(),
@@ -59,9 +53,9 @@ class _FlutterSlidableScreenState extends State<FlutterSlidableScreen> {
                     ),
                   ],
                 ),
-          
+
                 // The end action pane is the one at the right or the bottom side.
-                endActionPane:  ActionPane(
+                endActionPane: ActionPane(
                   motion: ScrollMotion(),
                   children: [
                     SlidableAction(
@@ -82,16 +76,18 @@ class _FlutterSlidableScreenState extends State<FlutterSlidableScreen> {
                     ),
                   ],
                 ),
-          
+
                 // The child of the Slidable is what the user sees when the
                 // component is not dragged.
                 child: Container(
                     color: Colors.blueGrey,
-                    child: Center(child: const ListTile(title: Text('Slide me right and left')))),
+                    child: Center(
+                        child: const ListTile(
+                            title: Text('Slide me right and left')))),
               ),
-
-              SizedBox(height: 10,),
-
+              SizedBox(
+                height: 10,
+              ),
               Slidable(
                 // Specify a key if the Slidable is dismissible.
                 key: const ValueKey(1),
@@ -105,7 +101,7 @@ class _FlutterSlidableScreenState extends State<FlutterSlidableScreen> {
                   // A pane can dismiss the Slidable.
                   dismissible: DismissiblePane(onDismissed: () {}),
 
-                  children:  [
+                  children: [
                     // A SlidableAction can have an icon and/or a label.
                     SlidableAction(
                       onPressed: (context) => onPressed(),
@@ -126,11 +122,13 @@ class _FlutterSlidableScreenState extends State<FlutterSlidableScreen> {
 
                 child: Container(
                     color: Colors.blueGrey,
-                    child: Center(child: const ListTile(title: Text('Slide me right BehindMotion')))),
+                    child: Center(
+                        child: const ListTile(
+                            title: Text('Slide me right BehindMotion')))),
               ),
-
-              SizedBox(height: 10,),
-
+              SizedBox(
+                height: 10,
+              ),
               Slidable(
                 // Specify a key if the Slidable is dismissible.
                 key: const ValueKey(2),
@@ -143,7 +141,7 @@ class _FlutterSlidableScreenState extends State<FlutterSlidableScreen> {
                   // A pane can dismiss the Slidable.
                   dismissible: DismissiblePane(onDismissed: () {}),
 
-                  children:  [
+                  children: [
                     // A SlidableAction can have an icon and/or a label.
                     SlidableAction(
                       onPressed: (context) => onPressed(),
@@ -164,11 +162,13 @@ class _FlutterSlidableScreenState extends State<FlutterSlidableScreen> {
 
                 child: Container(
                     color: Colors.blueGrey,
-                    child: Center(child: const ListTile(title: Text('Slide me right DrawerMotion')))),
+                    child: Center(
+                        child: const ListTile(
+                            title: Text('Slide me right DrawerMotion')))),
               ),
-
-              SizedBox(height: 10,),
-
+              SizedBox(
+                height: 10,
+              ),
               Slidable(
                 // Specify a key if the Slidable is dismissible.
                 key: const ValueKey(3),
@@ -181,7 +181,7 @@ class _FlutterSlidableScreenState extends State<FlutterSlidableScreen> {
                   // A pane can dismiss the Slidable.
                   dismissible: DismissiblePane(onDismissed: () {}),
 
-                  children:  [
+                  children: [
                     // A SlidableAction can have an icon and/or a label.
                     SlidableAction(
                       onPressed: (context) => onPressed(),
@@ -202,10 +202,10 @@ class _FlutterSlidableScreenState extends State<FlutterSlidableScreen> {
 
                 child: Container(
                     color: Colors.blueGrey,
-                    child: Center(child: const ListTile(title: Text('Slide me right StretchMotion')))),
+                    child: Center(
+                        child: const ListTile(
+                            title: Text('Slide me right StretchMotion')))),
               ),
-
-
             ],
           ),
         ),

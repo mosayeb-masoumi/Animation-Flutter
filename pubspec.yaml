@@ -119,6 +119,8 @@ dependencies:
 
   syncfusion_flutter_gauges: ^24.2.7
 
+  expansion_tile_card: ^3.0.0
+
   solar_datepicker:
     path: packages/solar_datepicker
 

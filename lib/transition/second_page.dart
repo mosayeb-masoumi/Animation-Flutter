@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatefulWidget {
@@ -14,7 +13,10 @@ class _SecondPageState extends State<SecondPage> {
     return Scaffold(
       backgroundColor: Colors.orange,
       body: Center(
-        child: Text("page 2" , style: TextStyle(color: Colors.white , fontSize: 20),),
+        child: Text(
+          "page 2",
+          style: TextStyle(color: Colors.white, fontSize: 20),
+        ),
       ),
     );
   }

@@ -8,12 +8,10 @@ class VirtualKeyboard extends StatefulWidget {
 }
 
 class _VirtualKeyboardState extends State<VirtualKeyboard> {
-
   String resultNumber = "";
 
   @override
   Widget build(BuildContext context) {
-
     Size size = MediaQuery.sizeOf(context);
 
     return Scaffold(
@@ -21,55 +19,55 @@ class _VirtualKeyboardState extends State<VirtualKeyboard> {
         title: const Text("Virtual keybord"),
       ),
       body: Container(
-          width: size.width,
-          height: size.height,
-          color: Colors.green.shade200,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                resultNumber,
-                style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Material(  // wrap container with material to show inkwell splash effect when click
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                child: Container(
-                  width: 300,
-                  height: 400,
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      // color: Colors.white,
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    children: [
-                      Expanded(child: buildRow("7", "8", "9", size)),
-                      buildHorizontalDivider(size),
-                      Expanded(child: buildRow("4", "5", "6", size)),
-                      buildHorizontalDivider(size),
-                      Expanded(child: buildRow("1", "2", "3", size)),
-                      buildHorizontalDivider(size),
-                      Expanded(
-                          child: buildRow("Reset", "0", "Back", size))
-                    ],
-                  ),
+        width: size.width,
+        height: size.height,
+        color: Colors.green.shade200,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              resultNumber,
+              style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Material(
+              // wrap container with material to show inkwell splash effect when click
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              child: Container(
+                width: 300,
+                height: 400,
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    // color: Colors.white,
+                    borderRadius: BorderRadius.circular(20)),
+                child: Column(
+                  children: [
+                    Expanded(child: buildRow("7", "8", "9", size)),
+                    buildHorizontalDivider(size),
+                    Expanded(child: buildRow("4", "5", "6", size)),
+                    buildHorizontalDivider(size),
+                    Expanded(child: buildRow("1", "2", "3", size)),
+                    buildHorizontalDivider(size),
+                    Expanded(child: buildRow("Reset", "0", "Back", size))
+                  ],
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
-
+      ),
     );
   }
 
-  Widget buildRow(String leftNumber, String middleNumber, String rightNumber, Size size) {
+  Widget buildRow(
+      String leftNumber, String middleNumber, String rightNumber, Size size) {
     return Row(
       children: [
         //left number
@@ -107,7 +105,8 @@ class _VirtualKeyboardState extends State<VirtualKeyboard> {
           child: InkWell(
             onTap: () {
               setState(() {
-                resultNumber += middleNumber; // Adding a letter 'A' to the string
+                resultNumber +=
+                    middleNumber; // Adding a letter 'A' to the string
               });
             },
             child: Center(
@@ -130,15 +129,16 @@ class _VirtualKeyboardState extends State<VirtualKeyboard> {
             onTap: () {
               if (rightNumber != "Back") {
                 setState(() {
-                  resultNumber += rightNumber; // Adding a letter 'A' to the string
+                  resultNumber +=
+                      rightNumber; // Adding a letter 'A' to the string
                 });
               } else {
-                if(resultNumber.trim().isNotEmpty){
+                if (resultNumber.trim().isNotEmpty) {
                   setState(() {
-                    resultNumber = resultNumber.substring(0, resultNumber.length - 1); // Remove last character
+                    resultNumber = resultNumber.substring(
+                        0, resultNumber.length - 1); // Remove last character
                   });
                 }
-
               }
             },
             child: Center(

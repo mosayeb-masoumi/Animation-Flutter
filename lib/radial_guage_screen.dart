@@ -46,7 +46,6 @@ class _RadialGaugeScreenState extends State<RadialGaugeScreen> {
                           value: 90,
                           enableAnimation: true,
                           markerHeight: 20,
-
                         ),
                         NeedlePointer(
                           value: 90,

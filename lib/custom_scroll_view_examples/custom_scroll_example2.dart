@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomScrollExample2 extends StatefulWidget {
@@ -73,11 +72,11 @@ class _CustomScrollExample2State extends State<CustomScrollExample2> {
           SliverList(
               delegate: SliverChildBuilderDelegate(
                   childCount: 20, // Number of items in the list
-                      (context, index) {
-                    return ListTile(
-                      title: Text('Item $index'),
-                    );
-                  }))
+                  (context, index) {
+            return ListTile(
+              title: Text('Item $index'),
+            );
+          }))
         ],
       ),
     );

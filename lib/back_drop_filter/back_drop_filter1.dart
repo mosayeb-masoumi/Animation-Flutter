@@ -1,4 +1,3 @@
-
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
@@ -24,16 +23,14 @@ class _BackDropFilter1State extends State<BackDropFilter1> {
               margin: const EdgeInsets.symmetric(horizontal: 40),
               height: 400,
               decoration: const BoxDecoration(
-                  color: Colors.orange,
-                shape: BoxShape.circle
-              ),
+                  color: Colors.orange, shape: BoxShape.circle),
             ),
             Container(
               width: size.width,
               margin: const EdgeInsets.only(top: 250),
               height: 400,
               decoration: const BoxDecoration(
-                  color: Colors.deepPurple,
+                color: Colors.deepPurple,
               ),
             ),
             BackdropFilter(
@@ -48,4 +45,3 @@ class _BackDropFilter1State extends State<BackDropFilter1> {
     );
   }
 }
-

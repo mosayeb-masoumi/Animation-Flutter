@@ -21,21 +21,33 @@ class _ClipperExampleState extends State<ClipperExample> {
           children: [
             ClipPath(
               clipper: Clip1Clipper(),
-              child: Container(width: 200,height: 200, color: Colors.orange,),
+              child: Container(
+                width: 200,
+                height: 200,
+                color: Colors.orange,
+              ),
             ),
-
-            const SizedBox(height: 5,),
-
+            const SizedBox(
+              height: 5,
+            ),
             ClipPath(
               clipper: Clip2Clipper(),
-              child: Container(width: 200,height: 200, color: Colors.orange,),
+              child: Container(
+                width: 200,
+                height: 200,
+                color: Colors.orange,
+              ),
             ),
-
-            const SizedBox(height: 5,),
-
+            const SizedBox(
+              height: 5,
+            ),
             ClipPath(
               clipper: Clip3Clipper(),
-              child: Container(width: 200,height: 200, color: Colors.orange,),
+              child: Container(
+                width: 200,
+                height: 200,
+                color: Colors.orange,
+              ),
             ),
           ],
         ),
@@ -44,7 +56,7 @@ class _ClipperExampleState extends State<ClipperExample> {
   }
 }
 
-class Clip1Clipper extends CustomClipper<Path>{
+class Clip1Clipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path = Path();
@@ -59,13 +71,14 @@ class Clip1Clipper extends CustomClipper<Path>{
     throw UnimplementedError();
   }
 }
-class Clip2Clipper extends CustomClipper<Path>{
+
+class Clip2Clipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path = Path();
     path.lineTo(0, size.height);
     path.lineTo(size.width, size.height);
-    path.quadraticBezierTo(size.width, 0 ,0 ,0);
+    path.quadraticBezierTo(size.width, 0, 0, 0);
     return path;
   }
 
@@ -75,13 +88,14 @@ class Clip2Clipper extends CustomClipper<Path>{
     throw UnimplementedError();
   }
 }
-class Clip3Clipper extends CustomClipper<Path>{
+
+class Clip3Clipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path = Path();
     path.lineTo(0, size.height);
     path.lineTo(size.width, size.height);
-    path.quadraticBezierTo(0, size.height ,0 ,0);
+    path.quadraticBezierTo(0, size.height, 0, 0);
     return path;
   }
 
@@ -90,7 +104,4 @@ class Clip3Clipper extends CustomClipper<Path>{
     // TODO: implement shouldReclip
     throw UnimplementedError();
   }
-
 }
-
-

@@ -24,7 +24,6 @@ class _PopupMenuItemPageState extends State<PopupMenuItemPage> {
           ListTile(
             title: Text(title),
             trailing: PopupMenuButton(
-
               itemBuilder: (context) => [
                 PopupMenuItem(
                   child: Text("item 1"),
@@ -68,7 +67,7 @@ class PopupOverExample extends StatelessWidget {
             width: 250,
             height: 150,
             backgroundColor: Colors.deepPurple.shade300,
-          direction: PopoverDirection.top);
+            direction: PopoverDirection.top);
       },
       child: const Icon(Icons.more_vert),
     );

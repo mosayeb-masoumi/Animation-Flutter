@@ -32,7 +32,8 @@ class _ExpansionTilePageState extends State<ExpansionTilePage> {
               // });
             },
 
-            controlAffinity: ListTileControlAffinity.leading, // to move arrow to start of tile
+            controlAffinity: ListTileControlAffinity
+                .leading, // to move arrow to start of tile
           )
         ],
       ),

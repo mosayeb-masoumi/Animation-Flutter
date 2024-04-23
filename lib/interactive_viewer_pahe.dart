@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class InteractiveViewerPage extends StatefulWidget {
@@ -13,16 +12,17 @@ class _InteractiveViewerPageState extends State<InteractiveViewerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.yellow,
-      appBar: AppBar(title: Text("flutter app"),),
+      appBar: AppBar(
+        title: Text("flutter app"),
+      ),
       body: InteractiveViewer(
-        boundaryMargin: EdgeInsets.all(double.infinity),
+          boundaryMargin: EdgeInsets.all(double.infinity),
           child: Scaffold(
-            appBar: AppBar(
-              title: Text("Interactive viewer")
+            appBar: AppBar(title: Text("Interactive viewer")),
+            body: Center(
+              child: Text("gesture zoom in zoom out inner page"),
             ),
-            body: Center(child: Text("gesture zoom in zoom out inner page"),),
-          ))
-      ,
+          )),
     );
   }
 }

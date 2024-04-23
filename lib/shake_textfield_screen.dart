@@ -20,7 +20,8 @@ class _ShakeTextFieldScreenState extends State<ShakeTextFieldScreen> {
         children: [
           Text("Textfield shaked when enter more than 6 character"),
           Center(
-            child: Container(margin: EdgeInsets.all(20), child: ShakeTextField()),
+            child:
+                Container(margin: EdgeInsets.all(20), child: ShakeTextField()),
           ),
         ],
       ),
@@ -79,12 +80,17 @@ class _ShakeTextFieldState extends State<ShakeTextField>
                 controller: _textFieldController,
                 decoration: InputDecoration(
                   hintText: 'Enter text',
-                  errorText: _textFieldController.text.length > 6 ? 'Error: more then 6 character':"", // Set error message here
+                  errorText: _textFieldController.text.length > 6
+                      ? 'Error: more then 6 character'
+                      : "", // Set error message here
                 ),
-                style: TextStyle(color: _textFieldController.text.length <= 6 ? Colors.black :Colors.red),
-                onChanged: (value){
+                style: TextStyle(
+                    color: _textFieldController.text.length <= 6
+                        ? Colors.black
+                        : Colors.red),
+                onChanged: (value) {
                   setState(() {});
-                  if(value.length >6){
+                  if (value.length > 6) {
                     shake();
                   }
                 },
@@ -92,10 +98,11 @@ class _ShakeTextFieldState extends State<ShakeTextField>
             );
           },
         ),
-
-        ElevatedButton(onPressed: (){
-          shake();
-        }, child: Text("shake"))
+        ElevatedButton(
+            onPressed: () {
+              shake();
+            },
+            child: Text("shake"))
       ],
     );
   }

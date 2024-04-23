@@ -80,19 +80,19 @@ class CustomDropdownButton2 extends StatelessWidget {
         value: value,
         items: dropdownItems
             .map((item) => DropdownMenuItem<String>(
-          value: item,
-          child: Container(
-            alignment: valueAlignment,
-            child: Text(
-              item,
-              overflow: TextOverflow.ellipsis,
-              maxLines: 1,
-              style: const TextStyle(
-                fontSize: 14,
-              ),
-            ),
-          ),
-        ))
+                  value: item,
+                  child: Container(
+                    alignment: valueAlignment,
+                    child: Text(
+                      item,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      style: const TextStyle(
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+                ))
             .toList(),
         onChanged: onChanged,
         selectedItemBuilder: selectedItemBuilder,

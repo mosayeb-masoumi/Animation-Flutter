@@ -15,7 +15,7 @@ class _SliderPageState extends State<SliderPage> {
     return Scaffold(
       body: SafeArea(
           child: Center(
-           child: Slider(
+        child: Slider(
             value: _currentSliderValue,
             max: 100,
             divisions: 10,

@@ -62,7 +62,6 @@ class _StepperPageState extends State<StepperPage> {
 
           // type: StepperType.horizontal,
           type: StepperType.vertical,
-
         ),
       )),
     );

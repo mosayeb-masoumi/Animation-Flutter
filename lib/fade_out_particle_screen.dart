@@ -1,4 +1,3 @@
-
 import 'package:fade_out_particle/fade_out_particle.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +9,6 @@ class FadeOutParticleScreen extends StatefulWidget {
 }
 
 class _FadeOutParticleScreenState extends State<FadeOutParticleScreen> {
-
   bool _disappear = true;
 
   @override
@@ -20,13 +18,10 @@ class _FadeOutParticleScreenState extends State<FadeOutParticleScreen> {
         child: Container(
           width: double.infinity,
           height: double.infinity,
-
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-
-
               FadeOutParticle(
                 curve: Curves.linear,
                 disappear: _disappear,
@@ -43,20 +38,18 @@ class _FadeOutParticleScreenState extends State<FadeOutParticleScreen> {
                     Text(
                       'Fade out Particle',
                       style: Theme.of(context).textTheme.headline6?.copyWith(
-                        fontWeight: FontWeight.w900,
-                      ),
+                            fontWeight: FontWeight.w900,
+                          ),
                     ),
                   ],
                 ),
                 onAnimationEnd: () => print('animation ended'),
               ),
-
               const SizedBox(height: 50),
               OutlinedButton(
                 onPressed: () => setState(() => _disappear = !_disappear),
                 child: Text(_disappear ? 'Reset' : 'Start'),
               ),
-
             ],
           ),
         ),

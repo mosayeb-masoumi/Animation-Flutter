@@ -15,7 +15,6 @@ class _DelayDisplayPageState extends State<DelayDisplayPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("delay display"), centerTitle: true),
-
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -29,8 +28,7 @@ class _DelayDisplayPageState extends State<DelayDisplayPage> {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 35.0,
-                  color: Colors.red
-                  ,
+                  color: Colors.red,
                 ),
               ),
             ),
@@ -86,7 +84,6 @@ class _DelayDisplayPageState extends State<DelayDisplayPage> {
           ],
         ),
       ),
-
     );
   }
 }

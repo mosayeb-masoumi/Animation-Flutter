@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CheckboxListTilePage extends StatefulWidget {
@@ -9,7 +8,6 @@ class CheckboxListTilePage extends StatefulWidget {
 }
 
 class _CheckboxListTilePageState extends State<CheckboxListTilePage> {
-
   bool _isChecked = false;
 
   @override
@@ -18,20 +16,19 @@ class _CheckboxListTilePageState extends State<CheckboxListTilePage> {
       body: Center(
         child: CheckboxListTile(
           title: Text("checkbox list tile"),
-            subtitle: Text("this is a subtitle"),
-            value: _isChecked,
-            onChanged: (bool? newValue){
+          subtitle: Text("this is a subtitle"),
+          value: _isChecked,
+          onChanged: (bool? newValue) {
             setState(() {
               _isChecked = newValue!;
             });
-
-            } ,
+          },
           activeColor: Colors.orange,
           checkColor: Colors.white,
           tileColor: Colors.black12,
-          controlAffinity: ListTileControlAffinity.leading,  // to move checkbox to the right
+          controlAffinity:
+              ListTileControlAffinity.leading, // to move checkbox to the right
           // tristate: true,
-          
         ),
       ),
     );

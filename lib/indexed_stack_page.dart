@@ -60,8 +60,8 @@ class _IndexedStackPageState extends State<IndexedStackPage> {
               ),
             ],
           ),
-
-          Text("click on each button show diffrent image (clean code)  IndextedStack")
+          Text(
+              "click on each button show diffrent image (clean code)  IndextedStack")
         ],
       )),
     );

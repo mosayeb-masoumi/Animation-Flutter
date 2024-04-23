@@ -9,13 +9,10 @@ class SliverTabbar extends StatefulWidget {
 
 class _SliverTabbarState extends State<SliverTabbar>
     with SingleTickerProviderStateMixin {
-
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-
   }
 
   void _handleTabSelection() {
@@ -60,7 +57,8 @@ class _SliverTabbarState extends State<SliverTabbar>
                                   width: 10,
                                 ),
                                 Container(
-                                  margin:const EdgeInsets.only(left: 10, right: 20),
+                                  margin: const EdgeInsets.only(
+                                      left: 10, right: 20),
                                   height: 50,
                                   width: 50,
                                   decoration: const BoxDecoration(
@@ -76,7 +74,8 @@ class _SliverTabbarState extends State<SliverTabbar>
                             const SizedBox(
                               height: 50,
                             ),
-                            const Text("hdsfhuihkjhsdflkhaiuwerfi8wqeyhifhasifdhl")
+                            const Text(
+                                "hdsfhuihkjhsdflkhaiuwerfi8wqeyhifhasifdhl")
                           ],
                         ),
                       ],
@@ -94,7 +93,7 @@ class _SliverTabbarState extends State<SliverTabbar>
                   child: Container(
                     color: Colors.blueGrey,
                     child: const TabBar(
-                       isScrollable: false,
+                      isScrollable: false,
                       indicatorColor: Colors.yellow,
                       labelColor: Colors.yellow,
                       unselectedLabelColor: Colors.red,
@@ -109,24 +108,25 @@ class _SliverTabbarState extends State<SliverTabbar>
             ];
           },
           body: TabBarView(
-
             children: [
-
               //first tab
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.width,
                 color: Colors.greenAccent,
-                child: const Center(child: Text("first tab"),),
+                child: const Center(
+                  child: Text("first tab"),
+                ),
               ),
-
 
               // second tab
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.width,
                 color: Colors.greenAccent,
-                child: const Center(child: Text("second tab"),),
+                child: const Center(
+                  child: Text("second tab"),
+                ),
               )
             ],
           ),

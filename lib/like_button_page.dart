@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
 
@@ -8,9 +7,9 @@ class LikeButtonPage extends StatefulWidget {
   @override
   State<LikeButtonPage> createState() => _LikeButtonPageState();
 }
+
 //
 class _LikeButtonPageState extends State<LikeButtonPage> {
-
   double buttonSize = 40.0;
   final int likeCount = 999;
   final GlobalKey<LikeButtonState> _globalKey = GlobalKey<LikeButtonState>();
@@ -21,10 +20,9 @@ class _LikeButtonPageState extends State<LikeButtonPage> {
         title: const Text('Like Button Demo'),
       ),
       body: GridView(
-        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 300),
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 300),
         children: <Widget>[
-
-
           LikeButton(
             size: buttonSize,
             likeCount: likeCount,
@@ -35,7 +33,7 @@ class _LikeButtonPageState extends State<LikeButtonPage> {
             },
             countBuilder: (int? count, bool isLiked, String text) {
               final ColorSwatch<int> color =
-              isLiked ? Colors.pinkAccent : Colors.grey;
+                  isLiked ? Colors.pinkAccent : Colors.grey;
               Widget result;
               if (count == 0) {
                 result = Text(
@@ -57,11 +55,6 @@ class _LikeButtonPageState extends State<LikeButtonPage> {
             likeCountPadding: const EdgeInsets.only(left: 10.0),
             onTap: onLikeButtonTapped,
           ),
-
-
-
-
-
           LikeButton(
             size: buttonSize,
             circleColor: const CircleColor(
@@ -80,7 +73,7 @@ class _LikeButtonPageState extends State<LikeButtonPage> {
             likeCount: 665,
             countBuilder: (int? count, bool isLiked, String text) {
               final ColorSwatch<int> color =
-              isLiked ? Colors.deepPurpleAccent : Colors.grey;
+                  isLiked ? Colors.deepPurpleAccent : Colors.grey;
               Widget result;
               if (count == 0) {
                 result = Text(
@@ -96,12 +89,6 @@ class _LikeButtonPageState extends State<LikeButtonPage> {
             },
             likeCountPadding: const EdgeInsets.only(left: 15.0),
           ),
-
-
-
-
-
-
           LikeButton(
             size: buttonSize,
             circleColor: const CircleColor(
@@ -133,18 +120,9 @@ class _LikeButtonPageState extends State<LikeButtonPage> {
                   style: TextStyle(color: color),
                 );
               return result;
-
-
-
             },
             likeCountPadding: const EdgeInsets.only(left: 15.0),
           ),
-
-
-
-
-
-
           LikeButton(
             size: buttonSize,
             isLiked: null,
@@ -172,11 +150,6 @@ class _LikeButtonPageState extends State<LikeButtonPage> {
             },
             likeCountPadding: const EdgeInsets.only(left: 15.0),
           ),
-
-
-
-
-
           LikeButton(
             size: buttonSize,
             circleColor: CircleColor(
@@ -193,11 +166,6 @@ class _LikeButtonPageState extends State<LikeButtonPage> {
               );
             },
           ),
-
-
-
-
-
           LikeButton(
             size: buttonSize,
             isLiked: null,
@@ -226,10 +194,6 @@ class _LikeButtonPageState extends State<LikeButtonPage> {
             },
             likeCountPadding: const EdgeInsets.only(right: 15.0),
           ),
-
-
-
-
           LikeButton(
             size: buttonSize,
             isLiked: null,
@@ -274,12 +238,6 @@ class _LikeButtonPageState extends State<LikeButtonPage> {
               );
             },
           ),
-
-
-
-
-
-
           LikeButton(
             size: buttonSize,
             isLiked: null,

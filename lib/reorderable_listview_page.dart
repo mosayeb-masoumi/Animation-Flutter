@@ -18,25 +18,30 @@ class _ReorderableListViewPageState extends State<ReorderableListViewPage> {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Text("long press and drag item to another place"),
             Expanded(
               child: ReorderableListView(
                 shrinkWrap: true,
-                  children: List.generate(items.length, (index) => ListTile(
-                    key: Key("$index"),
-                    tileColor: items[index].isOdd ? Colors.grey:Colors.green,
-                    title: Text("item ${items[index]}"),
-                    trailing: Icon(Icons.drag_handle_sharp),
-                  )),
-                onReorder: (int oldIndex, int newIndex){
-                    setState(() {
-                      if(oldIndex < newIndex){
-                        newIndex -= 1;
-                      }
-                      final int item = items.removeAt(oldIndex);
-                      items.insert(newIndex, item);
-                    });
+                children: List.generate(
+                    items.length,
+                    (index) => ListTile(
+                          key: Key("$index"),
+                          tileColor:
+                              items[index].isOdd ? Colors.grey : Colors.green,
+                          title: Text("item ${items[index]}"),
+                          trailing: Icon(Icons.drag_handle_sharp),
+                        )),
+                onReorder: (int oldIndex, int newIndex) {
+                  setState(() {
+                    if (oldIndex < newIndex) {
+                      newIndex -= 1;
+                    }
+                    final int item = items.removeAt(oldIndex);
+                    items.insert(newIndex, item);
+                  });
                 },
               ),
             ),

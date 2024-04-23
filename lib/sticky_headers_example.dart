@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 
@@ -27,7 +26,7 @@ class _StickyHeadersExamplesState extends State<StickyHeadersExamples> {
           ),
           content: Container(
             height: 200,
-            color: Colors.blue.withAlpha(100*index),
+            color: Colors.blue.withAlpha(100 * index),
           ),
         );
       }),

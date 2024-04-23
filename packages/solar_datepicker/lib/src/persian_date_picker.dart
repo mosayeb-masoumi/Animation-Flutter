@@ -582,7 +582,8 @@ class SolarDayPicker extends StatelessWidget {
           Flexible(
             child: GridView.custom(
               gridDelegate: _kDayPickerGridDelegate,
-              childrenDelegate: SliverChildListDelegate(labels, addRepaintBoundaries: false),
+              childrenDelegate:
+                  SliverChildListDelegate(labels, addRepaintBoundaries: false),
               padding: EdgeInsets.zero,
             ),
           ),
@@ -904,7 +905,8 @@ class _SolarMonthPickerState extends State<SolarMonthPicker>
                       tooltip: _isDisplayingLastMonth
                           ? null
                           : '${localizations.nextMonthTooltip} ${localizations.formatMonthYear(_nextMonthDate)}',
-                      onPressed: _isDisplayingLastMonth ? null : _handleNextMonth,
+                      onPressed:
+                          _isDisplayingLastMonth ? null : _handleNextMonth,
                     ),
                   ),
                 ),
@@ -1191,11 +1193,7 @@ class _DatePickerDialogState extends State<_DatePickerDialog> {
       children: <Widget>[
         Container(
           margin: EdgeInsets.all(2),
-          decoration: BoxDecoration(
-              color: Colors.pink,
-            shape: BoxShape.circle
-          ),
-
+          decoration: BoxDecoration(color: Colors.pink, shape: BoxShape.circle),
           child: TextButton(
             onPressed: _handleCancel,
             // child: Text(localizations.cancelButtonLabel),
@@ -1204,10 +1202,7 @@ class _DatePickerDialogState extends State<_DatePickerDialog> {
         ),
         Container(
           margin: EdgeInsets.all(2),
-          decoration: BoxDecoration(
-              color: Colors.pink,
-              shape: BoxShape.circle
-          ),
+          decoration: BoxDecoration(color: Colors.pink, shape: BoxShape.circle),
           child: TextButton(
             onPressed: _handleOk,
             // child: Text(localizations.okButtonLabel),

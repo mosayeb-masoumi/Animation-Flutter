@@ -19,27 +19,21 @@ class _BadgesPageState extends State<BadgesPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-
-
             example1(),
             example2(),
-
-
-
           ],
         ),
       ),
     );
   }
 
- Widget example2() {
-   return badges.Badge(
+  Widget example2() {
+    return badges.Badge(
       position: badges.BadgePosition.topEnd(top: -10, end: -12),
       showBadge: true,
       ignorePointer: false,
       onTap: () {},
-      badgeContent:
-     const  Icon(Icons.check, color: Colors.white, size: 10),
+      badgeContent: const Icon(Icons.check, color: Colors.white, size: 10),
       badgeAnimation: const badges.BadgeAnimation.rotation(
         animationDuration: Duration(seconds: 1),
         colorChangeAnimationDuration: Duration(seconds: 1),
@@ -47,7 +41,6 @@ class _BadgesPageState extends State<BadgesPage> {
         curve: Curves.fastOutSlowIn,
         colorChangeAnimationCurve: Curves.easeInCubic,
       ),
-
       badgeStyle: badges.BadgeStyle(
         shape: badges.BadgeShape.square,
         badgeColor: Colors.blue,
@@ -63,13 +56,12 @@ class _BadgesPageState extends State<BadgesPage> {
         ),
         elevation: 0,
       ),
-
       child: Text('Badge'),
     );
   }
 
   Widget example1() {
-   return badges.Badge(
+    return badges.Badge(
       badgeStyle: const badges.BadgeStyle(
         elevation: 10.0,
         badgeColor: Colors.blue,
@@ -78,13 +70,14 @@ class _BadgesPageState extends State<BadgesPage> {
         badgeGradient: badges.BadgeGradient.linear(
             colors: [Colors.yellowAccent, Colors.blue]),
 
-        borderSide: BorderSide(color: Colors.red , width: 2,),
+        borderSide: BorderSide(
+          color: Colors.red,
+          width: 2,
+        ),
         // shape: badges.BadgeShape.instagram
         // shape: badges.BadgeShape.twitter
         // shape: badges.BadgeShape.square
         shape: badges.BadgeShape.circle,
-
-
       ),
       position: badges.BadgePosition.topEnd(top: -10, end: -12),
       badgeContent: const Text(

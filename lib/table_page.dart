@@ -21,20 +21,20 @@ class _TablePageState extends State<TablePage> {
                 Table(
                   border: TableBorder.all(),
                   columnWidths: {
-                    0: FractionColumnWidth(0.5) , //first column
-                    1: FractionColumnWidth(0.25) , //second column
-                    2: FractionColumnWidth(0.25) , //third column
+                    0: FractionColumnWidth(0.5), //first column
+                    1: FractionColumnWidth(0.25), //second column
+                    2: FractionColumnWidth(0.25), //third column
                   },
                   children: [
-                     buildRow(["Name" , "Family" , "Age"] , isHeader : true),
-                     buildRow(["Mosayeb" , "Masoumi" , "65"]),
-                     buildRow(["nabi" , "rezai" , "30"]),
-                     buildRow(["roz" , "miladi" , "11"]),
+                    buildRow(["Name", "Family", "Age"], isHeader: true),
+                    buildRow(["Mosayeb", "Masoumi", "65"]),
+                    buildRow(["nabi", "rezai", "30"]),
+                    buildRow(["roz", "miladi", "11"]),
                   ],
                 ),
-
-
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Text("Example 2"),
                 Table(
                   border: TableBorder.all(color: Colors.purple),
@@ -44,19 +44,22 @@ class _TablePageState extends State<TablePage> {
                         decoration: BoxDecoration(color: Colors.redAccent),
                         children: [
                           TableCell(
-                              verticalAlignment: TableCellVerticalAlignment.middle,
+                              verticalAlignment:
+                                  TableCellVerticalAlignment.middle,
                               child: Padding(
                                 padding: const EdgeInsets.all(8),
                                 child: Text("Text 1"),
                               )),
                           TableCell(
-                              verticalAlignment: TableCellVerticalAlignment.middle,
+                              verticalAlignment:
+                                  TableCellVerticalAlignment.middle,
                               child: Padding(
                                 padding: const EdgeInsets.all(8),
                                 child: Text("Text 2"),
                               )),
                           TableCell(
-                              verticalAlignment: TableCellVerticalAlignment.middle,
+                              verticalAlignment:
+                                  TableCellVerticalAlignment.middle,
                               child: Padding(
                                 padding: const EdgeInsets.all(8),
                                 child: Text("Text 3"),
@@ -100,25 +103,23 @@ class _TablePageState extends State<TablePage> {
         ),
       ),
     );
-
-
-
   }
 
-  TableRow buildRow(List<String> cells ,{bool isHeader = false}) {
+  TableRow buildRow(List<String> cells, {bool isHeader = false}) {
     return TableRow(
-       children: cells.map((cell) {
+        children: cells.map((cell) {
+      final textStyle = TextStyle(
+          fontWeight: isHeader ? FontWeight.bold : FontWeight.normal,
+          fontSize: isHeader ? 17 : 15);
 
-         final textStyle = TextStyle(
-           fontWeight: isHeader? FontWeight.bold : FontWeight.normal,
-           fontSize: isHeader?17:15
-         );
-
-         return Padding(
-           padding: const EdgeInsets.all(12.0),
-           child: Center(child: Text(cell , style: textStyle,)),
-         );
-       }).toList()
-    );
+      return Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Center(
+            child: Text(
+          cell,
+          style: textStyle,
+        )),
+      );
+    }).toList());
   }
 }

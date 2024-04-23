@@ -58,7 +58,6 @@ class SolarDate {
       _defaultFormat = format;
     }
 
-
     _getNow = _now();
     _getDate = _now();
   }
@@ -75,11 +74,11 @@ class SolarDate {
 
     if (gregorian != null) {
       now = DateTime.parse(gregorian);
-      final List<int> solarDate = gregorianToSolar(now.year, now.month, now.day);
+      final List<int> solarDate =
+          gregorianToSolar(now.year, now.month, now.day);
 
       Gregorian g1 = Gregorian(now.year, now.month, now.day);
       Jalali j1 = g1.toJalali();
-
 
       setWeekday = now.weekday;
       // setYear = solarDate[0];

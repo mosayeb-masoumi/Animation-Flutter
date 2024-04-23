@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:logger/logger.dart';
@@ -12,8 +11,6 @@ class SolarDatePickerScreen extends StatefulWidget {
 }
 
 class _SolarDatePickerScreenState extends State<SolarDatePickerScreen> {
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,7 +29,7 @@ class _SolarDatePickerScreenState extends State<SolarDatePickerScreen> {
 
 class ISolarDatePickerScreen extends StatefulWidget {
   final String title;
-  const ISolarDatePickerScreen({super.key , required this.title});
+  const ISolarDatePickerScreen({super.key, required this.title});
 
   @override
   State<ISolarDatePickerScreen> createState() => _ISolarDatePickerScreenState();
@@ -64,7 +61,8 @@ class _ISolarDatePickerScreenState extends State<ISolarDatePickerScreen> {
 
     logger.e("Error log", error: 'Test Error');
 
-    logger.f("What a fatal log", error: "error", stackTrace: StackTrace.current);
+    logger.f("What a fatal log",
+        error: "error", stackTrace: StackTrace.current);
   }
 
   @override
@@ -83,8 +81,10 @@ class _ISolarDatePickerScreenState extends State<ISolarDatePickerScreen> {
               textDirection: TextDirection.rtl,
               initialDate: pickedDate ?? DateTime.now(),
               locale: Locale('fa', 'IR'),
-              firstDate: DateTime.now().subtract(Duration(days: 10 * 365)), // show last 10 years
-              lastDate: DateTime.now().add(Duration(days: 10 * 365)),  // show next 10 years
+              firstDate: DateTime.now()
+                  .subtract(Duration(days: 10 * 365)), // show last 10 years
+              lastDate: DateTime.now()
+                  .add(Duration(days: 10 * 365)), // show next 10 years
               isPersian: true,
               selectableDayPredicate: (day) {
                 return true;
@@ -104,4 +104,3 @@ class _ISolarDatePickerScreenState extends State<ISolarDatePickerScreen> {
     );
   }
 }
-

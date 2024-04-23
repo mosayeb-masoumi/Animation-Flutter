@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:slide_switcher/slide_switcher.dart';
 
@@ -10,7 +9,6 @@ class SlideSwitcherPage extends StatefulWidget {
 }
 
 class _SlideSwitcherPageState extends State<SlideSwitcherPage> {
-
   bool switchValue = false;
   @override
   Widget build(BuildContext context) {
@@ -21,8 +19,9 @@ class _SlideSwitcherPageState extends State<SlideSwitcherPage> {
         height: double.infinity,
         child: Column(
           children: [
-
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             SlideSwitcher(
               children: [
                 Text('First'),
@@ -32,11 +31,11 @@ class _SlideSwitcherPageState extends State<SlideSwitcherPage> {
               containerHeight: 40,
               containerWight: 350,
             ),
-
-
             Row(
               children: [
-                SizedBox(width: 10,),
+                SizedBox(
+                  width: 10,
+                ),
                 SlideSwitcher(
                     children: [
                       Text('1st'),
@@ -45,28 +44,28 @@ class _SlideSwitcherPageState extends State<SlideSwitcherPage> {
                     onSelect: (index) {},
                     containerHeight: 350,
                     containerWight: 40,
-                    direction: Axis.vertical
+                    direction: Axis.vertical),
+                SizedBox(
+                  width: 10,
                 ),
-
-                SizedBox(width: 10,),
                 SlideSwitcher(
-                    children: [
-                      Text('1st'),
-                      Text('2nd'),
-                    ],
-                    onSelect: (index) {},
-                    containerHeight: 354,
-                    containerWight: 40,
-                    direction: Axis.vertical,
-                    containerColor: Colors.red,
-
-                    containerBorder: Border.all(color: Colors.black,width: 2),
-                    slidersGradients: [
-                      LinearGradient(colors: [Colors.blue , Colors.white])
-                    ],
+                  children: [
+                    Text('1st'),
+                    Text('2nd'),
+                  ],
+                  onSelect: (index) {},
+                  containerHeight: 354,
+                  containerWight: 40,
+                  direction: Axis.vertical,
+                  containerColor: Colors.red,
+                  containerBorder: Border.all(color: Colors.black, width: 2),
+                  slidersGradients: [
+                    LinearGradient(colors: [Colors.blue, Colors.white])
+                  ],
                 ),
-
-                SizedBox(width: 10,),
+                SizedBox(
+                  width: 10,
+                ),
                 SlideSwitcher(
                   children: [
                     Text('1st'),
@@ -78,13 +77,11 @@ class _SlideSwitcherPageState extends State<SlideSwitcherPage> {
                   direction: Axis.vertical,
                   containerColor: Colors.red,
                   slidersGradients: [
-                    LinearGradient(colors: [Colors.blue , Colors.white])
+                    LinearGradient(colors: [Colors.blue, Colors.white])
                   ],
                 ),
               ],
             ),
-
-
             SlideSwitcher(
               children: [
                 Container(),
@@ -96,10 +93,7 @@ class _SlideSwitcherPageState extends State<SlideSwitcherPage> {
               containerWight: 60,
               containerColor: Colors.red,
               slidersColors: [Colors.yellow],
-
-
             ),
-
             Switch(
               value: switchValue,
               onChanged: (value) {
@@ -107,16 +101,11 @@ class _SlideSwitcherPageState extends State<SlideSwitcherPage> {
                   switchValue = value;
                 });
               },
-
               activeColor: Colors.green,
               activeTrackColor: Colors.greenAccent,
               inactiveThumbColor: Colors.grey,
               inactiveTrackColor: Colors.grey.shade400,
-
-
-
             ),
-
           ],
         ),
       ),

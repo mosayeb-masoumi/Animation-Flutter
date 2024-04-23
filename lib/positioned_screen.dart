@@ -16,19 +16,29 @@ class _PositionedScreenState extends State<PositionedScreen> {
           child: Stack(
             children: [
               Positioned(
-                 left: 20,
+                  left: 20,
                   top: 20,
-                  child: Image.asset("assets/images/beach.jpeg" ,width: 200, height: 200,)),
-
+                  child: Image.asset(
+                    "assets/images/beach.jpeg",
+                    width: 200,
+                    height: 200,
+                  )),
               Positioned(
                   left: 60,
                   top: 120,
-                  child: Image.asset("assets/images/beach.jpeg" ,width: 200, height: 200,)),
-
+                  child: Image.asset(
+                    "assets/images/beach.jpeg",
+                    width: 200,
+                    height: 200,
+                  )),
               Positioned(
                   left: 100,
                   top: 220,
-                  child: Image.asset("assets/images/beach.jpeg" ,width: 200, height: 200,))
+                  child: Image.asset(
+                    "assets/images/beach.jpeg",
+                    width: 200,
+                    height: 200,
+                  ))
             ],
           ),
         ),

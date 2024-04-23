@@ -26,6 +26,7 @@ import 'package:flutter_animation/dotted_border/dotted_border_page.dart';
 import 'package:flutter_animation/draggable_scrollable_sheet.dart';
 import 'package:flutter_animation/dropdown_button_page/dropdown_button_page.dart';
 import 'package:flutter_animation/expandable_text.dart';
+import 'package:flutter_animation/expansion_tile_card_page.dart';
 import 'package:flutter_animation/fade_in_out.dart';
 import 'package:flutter_animation/fade_out_particle_screen.dart';
 import 'package:flutter_animation/flip_card_page.dart';
@@ -273,8 +274,6 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("CircleListPage")),
-
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -284,8 +283,6 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("CircleListMenuPage")),
-
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -397,6 +394,17 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("ExpansionTile Page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ExpansionTileCardPage()),
+                        );
+                      },
+                      child: Text("ExpansionTile Card Page")),
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -611,7 +619,6 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Refresh Indicator Page")),
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -621,8 +628,6 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Radial Gauge Screen")),
-
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -697,19 +702,16 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Shimmer Image Cache Page")),
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                              const ShakeTextFieldScreen()),
+                                  const ShakeTextFieldScreen()),
                         );
                       },
                       child: Text("Shake TextField Page")),
-
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -773,19 +775,16 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Virtual Keyboard page")),
-
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const  VirtualKeyboardCleanScreen()),
+                              builder: (context) =>
+                                  const VirtualKeyboardCleanScreen()),
                         );
                       },
                       child: Text("Virtual Keyboard clean page")),
-
-
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(

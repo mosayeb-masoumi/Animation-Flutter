@@ -1,4 +1,3 @@
-
 import 'package:animated_size_and_fade/animated_size_and_fade.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +9,6 @@ class AnimateSizeFadePage extends StatefulWidget {
 }
 
 class _AnimateSizeFadePageState extends State<AnimateSizeFadePage> {
-
   late bool toggle;
   @override
   void initState() {
@@ -20,18 +18,16 @@ class _AnimateSizeFadePageState extends State<AnimateSizeFadePage> {
 
   @override
   Widget build(BuildContext context) {
-
-
     var widget1 = Container(
       key: ValueKey("first"),
       color: Colors.blue,
       width: 200.0,
       child: const Text(
         "And I promise you I'll never desert you again because after 'Salome' "
-            "we'll make another picture and another picture. "
-            "You see, this is my life! "
-            "It always will be! Nothing else! "
-            "Just us, the cameras, and those wonderful people out there in the dark!...",
+        "we'll make another picture and another picture. "
+        "You see, this is my life! "
+        "It always will be! Nothing else! "
+        "Just us, the cameras, and those wonderful people out there in the dark!...",
       ),
     );
 
@@ -52,15 +48,16 @@ class _AnimateSizeFadePageState extends State<AnimateSizeFadePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(onPressed: (){
-              setState(() {
-                toggle = !toggle;
-              });
-
-            }, child: Text("toggle")),
-
-            SizedBox(height: 30,),
-
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    toggle = !toggle;
+                  });
+                },
+                child: Text("toggle")),
+            SizedBox(
+              height: 30,
+            ),
             const Text("Some text above."),
             AnimatedSizeAndFade(
               child: toggle ? widget1 : widget2,

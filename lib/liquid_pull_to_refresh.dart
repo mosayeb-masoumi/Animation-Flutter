@@ -10,7 +10,6 @@ class LiquidPullToRefreshPage extends StatefulWidget {
 }
 
 class _LiquidPullToRefreshPageState extends State<LiquidPullToRefreshPage> {
-
   List<String> list = [];
 
   @override
@@ -20,7 +19,6 @@ class _LiquidPullToRefreshPageState extends State<LiquidPullToRefreshPage> {
     _getList();
   }
 
-
   Future<void> _handleRefresh() async {
     await Future.delayed(Duration(seconds: 2));
     _getList();
@@ -29,38 +27,38 @@ class _LiquidPullToRefreshPageState extends State<LiquidPullToRefreshPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Liquid pull to refresh"),),
+      appBar: AppBar(
+        title: Text("Liquid pull to refresh"),
+      ),
 
       // body: SingleChildScrollView(
 
-        body: LiquidPullToRefresh(
-          onRefresh:_handleRefresh ,
-          // animSpeedFactor: 3,
-           springAnimationDurationInMilliseconds: 500,
-           backgroundColor: Colors.pink,
-           color: Colors.grey,
-           showChildOpacityTransition: true,
-          child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: list.length,
-                itemBuilder: (context, index) {
-                  return Container(
-                    width: MediaQuery
-                        .of(context)
-                        .size
-                        .width,
-                    height: 70,
-                    margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                    decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-
-                    child: Center(child: Text(
-                      list[index], style: TextStyle(color: Colors.white),)),
-                  );
-                }),
-        ),
+      body: LiquidPullToRefresh(
+        onRefresh: _handleRefresh,
+        // animSpeedFactor: 3,
+        springAnimationDurationInMilliseconds: 500,
+        backgroundColor: Colors.pink,
+        color: Colors.grey,
+        showChildOpacityTransition: true,
+        child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: list.length,
+            itemBuilder: (context, index) {
+              return Container(
+                width: MediaQuery.of(context).size.width,
+                height: 70,
+                margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(10)),
+                child: Center(
+                    child: Text(
+                  list[index],
+                  style: TextStyle(color: Colors.white),
+                )),
+              );
+            }),
+      ),
 
       // ),
     );
@@ -80,6 +78,4 @@ class _LiquidPullToRefreshPageState extends State<LiquidPullToRefreshPage> {
     list.add("hassan");
     list.add("milad");
   }
-
-
 }

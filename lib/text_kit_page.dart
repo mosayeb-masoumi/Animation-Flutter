@@ -9,10 +9,6 @@ class AnimateTextKitPage extends StatefulWidget {
 }
 
 class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
-
-
-
-
   static const colorizeColors = [
     Colors.purple,
     Colors.blue,
@@ -24,7 +20,6 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
     fontSize: 50.0,
     fontFamily: 'Horizon',
   );
-
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +48,9 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
                 stopPauseOnTap: true,
               ),
 
-              Divider(color: Colors.black26,),
+              Divider(
+                color: Colors.black26,
+              ),
 
               Row(
                 // mainAxisSize: MainAxisSize.min,
@@ -79,17 +76,16 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
                       ],
                       onTap: () {
                         print("Tap Event");
-
-                        },
-
-                       repeatForever: true,
-
+                      },
+                      repeatForever: true,
                     ),
                   ),
                 ],
               ),
 
-              Divider(color: Colors.black26,),
+              Divider(
+                color: Colors.black26,
+              ),
 
               // AnimatedTextKit(
               //   animatedTexts: [
@@ -129,8 +125,9 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
                 ),
               ),
 
-
-              Divider(color: Colors.black26,),
+              Divider(
+                color: Colors.black26,
+              ),
 
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -155,7 +152,9 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
                 ),
               ),
 
-              Divider(color: Colors.black26,),
+              Divider(
+                color: Colors.black26,
+              ),
 
               SizedBox(
                 width: 250.0,
@@ -181,8 +180,9 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
                 ),
               ),
 
-              Divider(color: Colors.black26,),
-
+              Divider(
+                color: Colors.black26,
+              ),
 
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -208,8 +208,9 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
                 ),
               ),
 
-              Divider(color: Colors.black26,),
-
+              Divider(
+                color: Colors.black26,
+              ),
 
               SizedBox(
                 width: 250.0,
@@ -239,7 +240,9 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
                 ),
               ),
 
-              Divider(color: Colors.black26,),
+              Divider(
+                color: Colors.black26,
+              ),
 
               SizedBox(
                 width: MediaQuery.of(context).size.width,
@@ -255,8 +258,9 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
                 ),
               ),
 
-              Divider(color: Colors.black26,),
-
+              Divider(
+                color: Colors.black26,
+              ),
 
               DefaultTextStyle(
                 style: const TextStyle(
@@ -276,9 +280,9 @@ class _AnimateTextKitPageState extends State<AnimateTextKitPage> {
                 ),
               ),
 
-
-              Divider(color: Colors.black26,),
-
+              Divider(
+                color: Colors.black26,
+              ),
             ],
           ),
         ),

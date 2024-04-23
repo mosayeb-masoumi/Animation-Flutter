@@ -1,4 +1,3 @@
-
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
@@ -6,12 +5,13 @@ class DashRotateBorderProfile extends StatefulWidget {
   const DashRotateBorderProfile({Key? key}) : super(key: key);
 
   @override
-  State<DashRotateBorderProfile> createState() => _DashRotateBorderProfileState();
+  State<DashRotateBorderProfile> createState() =>
+      _DashRotateBorderProfileState();
 }
 
-class _DashRotateBorderProfileState extends State<DashRotateBorderProfile>  with TickerProviderStateMixin{
-
-  late AnimationController  _rotateController2;
+class _DashRotateBorderProfileState extends State<DashRotateBorderProfile>
+    with TickerProviderStateMixin {
+  late AnimationController _rotateController2;
 
   @override
   void initState() {
@@ -31,6 +31,7 @@ class _DashRotateBorderProfileState extends State<DashRotateBorderProfile>  with
 
     _rotateController2.forward();
   }
+
   @override
   void dispose() {
     // TODO: implement dispose
@@ -42,23 +43,19 @@ class _DashRotateBorderProfileState extends State<DashRotateBorderProfile>  with
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          child: Center(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
+      child: Center(
+        child: ListView.builder(
+          itemCount: 5,
+          itemBuilder: (context, index) {
+            return buildRotation();
+          },
+        ),
 
-            child: ListView.builder(
-              itemCount: 5,
-              itemBuilder: (context , index){
-                return buildRotation();
-              },
-
-            ),
-
-            // child: buildRotation(),
-
-          ),
-        )
-    );
+        // child: buildRotation(),
+      ),
+    ));
   }
 
   Widget buildRotation() {
@@ -81,15 +78,12 @@ class _DashRotateBorderProfileState extends State<DashRotateBorderProfile>  with
                 strokeWidth: 2,
                 borderType: BorderType.Circle,
                 child: ClipOval(
-                  child: Container(
-                  ),
+                  child: Container(),
                 ),
               ),
             ),
           ),
         ),
-
-
         Container(
             width: 70,
             height: 70,
@@ -97,11 +91,8 @@ class _DashRotateBorderProfileState extends State<DashRotateBorderProfile>  with
             child: Image.asset(
               "assets/images/profile2.png",
               fit: BoxFit.cover,
-            )
-        ),
-
+            )),
       ],
-
     );
   }
 }

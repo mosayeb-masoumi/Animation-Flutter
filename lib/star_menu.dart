@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:star_menu/star_menu.dart';
 
@@ -30,44 +29,47 @@ class _StarMenuPageState extends State<StarMenuPage> {
     List<Widget> otherEntries = [
       FloatingActionButton(
         heroTag: "",
-        onPressed: (){
-          var a= 5;
+        onPressed: () {
+          var a = 5;
         },
         backgroundColor: Colors.red,
         child: Icon(Icons.add),
       ),
-
-
       FloatingActionButton(
         heroTag: "tag1",
-        onPressed: (){},
+        onPressed: () {},
         backgroundColor: Colors.black,
         child: Icon(Icons.add_call),
-      ).addStarMenu(items: upperMenuItems, params: StarMenuParameters.dropdown(context)),
+      ).addStarMenu(
+          items: upperMenuItems, params: StarMenuParameters.dropdown(context)),
       FloatingActionButton(
         heroTag: "tag2",
-        onPressed: (){},
+        onPressed: () {},
         backgroundColor: Colors.indigo,
         child: Icon(Icons.adb),
-      ).addStarMenu(items: upperMenuItems, params: StarMenuParameters.dropdown(context)),
+      ).addStarMenu(
+          items: upperMenuItems, params: StarMenuParameters.dropdown(context)),
       FloatingActionButton(
         heroTag: "tag3",
-        onPressed: (){},
+        onPressed: () {},
         backgroundColor: Colors.purple,
         child: Icon(Icons.home),
-      ).addStarMenu(items: upperMenuItems, params: StarMenuParameters.dropdown(context)),
+      ).addStarMenu(
+          items: upperMenuItems, params: StarMenuParameters.dropdown(context)),
       FloatingActionButton(
         heroTag: "tag4",
-        onPressed: (){},
+        onPressed: () {},
         backgroundColor: Colors.blueGrey,
         child: Icon(Icons.delete),
-      ).addStarMenu(items: upperMenuItems, params: StarMenuParameters.dropdown(context)),
+      ).addStarMenu(
+          items: upperMenuItems, params: StarMenuParameters.dropdown(context)),
       FloatingActionButton(
         heroTag: "tag5",
-        onPressed: (){},
+        onPressed: () {},
         backgroundColor: Colors.deepPurple,
         child: Icon(Icons.get_app),
-      ).addStarMenu(items: upperMenuItems, params: StarMenuParameters.dropdown(context)),
+      ).addStarMenu(
+          items: upperMenuItems, params: StarMenuParameters.dropdown(context)),
     ];
 
     // bottom left menu entries
@@ -123,18 +125,15 @@ class _StarMenuPageState extends State<StarMenuPage> {
         padding: const EdgeInsets.all(8.0),
         child: Stack(
           children: [
-
             // center menu with default [StarMenuParameters] parameters
             Align(
               alignment: Alignment.center,
               child: StarMenu(
-
-
                 params: StarMenuParameters(),
                 items: otherEntries,
                 child: FloatingActionButton(
                   heroTag: "",
-                  onPressed: (){},
+                  onPressed: () {},
                   mini: true,
                   backgroundColor: Colors.blue,
                   child: Icon(Icons.add),
@@ -155,7 +154,8 @@ class _StarMenuPageState extends State<StarMenuPage> {
                 items: otherEntries,
                 child: FloatingActionButton(
                     heroTag: "",
-                    onPressed: (){}, child: Icon(Icons.home_work_outlined)),
+                    onPressed: () {},
+                    child: Icon(Icons.home_work_outlined)),
               ),
             ),
 
@@ -188,7 +188,8 @@ class _StarMenuPageState extends State<StarMenuPage> {
                 ],
                 child: FloatingActionButton(
                     heroTag: "",
-                    onPressed: (){}, child: Icon(Icons.grid_view)),
+                    onPressed: () {},
+                    child: Icon(Icons.grid_view)),
               ),
             ),
 
@@ -210,7 +211,8 @@ class _StarMenuPageState extends State<StarMenuPage> {
                 items: chipsEntries,
                 child: FloatingActionButton(
                     heroTag: "",
-                    onPressed: (){}, child: Icon(Icons.view_stream_rounded)),
+                    onPressed: () {},
+                    child: Icon(Icons.view_stream_rounded)),
               ),
             ),
           ],

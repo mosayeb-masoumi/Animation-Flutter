@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/transition/second_page.dart';
 import 'package:page_transition/page_transition.dart';
@@ -11,7 +10,6 @@ class TransitionPage extends StatefulWidget {
 }
 
 class _TransitionPageState extends State<TransitionPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,13 +52,14 @@ class _TransitionPageState extends State<TransitionPage> {
                 },
               ),
               ElevatedButton(
-                child: Text('Right To Left Transition Second Page Ios SwipeBack'),
+                child:
+                    Text('Right To Left Transition Second Page Ios SwipeBack'),
                 onPressed: () {
                   Navigator.push(
                     context,
                     PageTransition(
-                        duration: Duration(milliseconds: 600),
-                        reverseDuration: Duration(milliseconds: 600),
+                      duration: Duration(milliseconds: 600),
+                      reverseDuration: Duration(milliseconds: 600),
                       type: PageTransitionType.rightToLeft,
                       isIos: true,
                       child: SecondPage(),
@@ -189,7 +188,6 @@ class _TransitionPageState extends State<TransitionPage> {
                   );
                 },
               ),
-
 
               // ElevatedButton(
               //   child: Text('Bottom to Top Pop'),

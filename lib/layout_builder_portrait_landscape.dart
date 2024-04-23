@@ -14,35 +14,33 @@ class _LayoutBuilderPortraitLandscapeState
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-      //     child: LayoutBuilder(
-      //     builder: (BuildContext context, BoxConstraints constraints) {
-      //   if (constraints.maxWidth > 600) {
-      //     // landscape
-      //     return Center(
-      //       child: Image.asset("assets/images/beach.jpeg"),
-      //     );
-      //   } else {
-      //     //portrait
-      //
-      //     return const Center(
-      //       child: Text("landscape the app will show another content"),
-      //     );
-      //   }
-      // })
+        //     child: LayoutBuilder(
+        //     builder: (BuildContext context, BoxConstraints constraints) {
+        //   if (constraints.maxWidth > 600) {
+        //     // landscape
+        //     return Center(
+        //       child: Image.asset("assets/images/beach.jpeg"),
+        //     );
+        //   } else {
+        //     //portrait
+        //
+        //     return const Center(
+        //       child: Text("landscape the app will show another content"),
+        //     );
+        //   }
+        // })
 
-        child: OrientationBuilder(
-            builder: (context , orientation){
-              if(orientation == Orientation.portrait){
-                return const Center(
-                  child: Text("this is portrait mode"),
-                );
-              }else{
-                return const Center(
-                  child: Text("this is landscape mode"),
-                );
-              }
-            }),
-
+        child: OrientationBuilder(builder: (context, orientation) {
+          if (orientation == Orientation.portrait) {
+            return const Center(
+              child: Text("this is portrait mode"),
+            );
+          } else {
+            return const Center(
+              child: Text("this is landscape mode"),
+            );
+          }
+        }),
       ),
     );
   }

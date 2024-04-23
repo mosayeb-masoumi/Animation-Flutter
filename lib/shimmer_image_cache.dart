@@ -48,13 +48,20 @@ class _ShimmerImageCacheScreenState extends State<ShimmerImageCacheScreen> {
                   color: Colors.white),
             ),
           ),
-
-         errorWidget: (context, url, error) => Container(
-          width: 350,
-          height: 350,
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,),
-           child: SvgPicture.asset("assets/images/G.svg",width: 350 ,height: 350,fit: BoxFit.contain , color: Colors.white,),),
+          errorWidget: (context, url, error) => Container(
+            width: 350,
+            height: 350,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+            ),
+            child: SvgPicture.asset(
+              "assets/images/G.svg",
+              width: 350,
+              height: 350,
+              fit: BoxFit.contain,
+              color: Colors.white,
+            ),
+          ),
         )),
       ),
     );

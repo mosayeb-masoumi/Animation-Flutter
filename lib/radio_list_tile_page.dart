@@ -27,7 +27,6 @@ class _RadioListTilePageState extends State<RadioListTilePage> {
                   currentOption = value.toString();
                 });
               }),
-
           RadioListTile(
               title: const Text("Option 2"),
               value: options[1],

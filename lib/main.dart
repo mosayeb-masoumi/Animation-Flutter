@@ -3,7 +3,6 @@ import 'package:flutter_animation/home_page.dart';
 
 import 'package:responsive_framework/responsive_framework.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -35,4 +34,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

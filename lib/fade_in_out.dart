@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class FadeInOut extends StatefulWidget {
@@ -9,9 +8,7 @@ class FadeInOut extends StatefulWidget {
 }
 
 class _FadeInOutState extends State<FadeInOut> {
-
   bool _visible = true;
-
 
   @override
   Widget build(BuildContext context) {
@@ -35,17 +32,16 @@ class _FadeInOutState extends State<FadeInOut> {
                 color: Colors.green,
               ),
             ),
-
-            ElevatedButton(onPressed: (){
-              setState(() {
-                _visible = !_visible;
-              });
-            }, child: Text("click"))
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    _visible = !_visible;
+                  });
+                },
+                child: Text("click"))
           ],
         ),
       ),
     );
   }
-
-
 }

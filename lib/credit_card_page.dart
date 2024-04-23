@@ -27,8 +27,6 @@ class _CreditCardPageState extends State<CreditCardPage> {
               }, //true when you want to show cvv(back) view
             ),
 
-
-
             CreditCardWidget(
               cardNumber: "1234 5678 9123 5689",
               expiryDate: "12/54/55",
@@ -66,9 +64,9 @@ class _CreditCardPageState extends State<CreditCardPage> {
               isSwipeGestureEnabled: true,
               animationDuration: Duration(milliseconds: 500),
               bankName: "Saman Bank",
-               chipColor: Colors.yellow,
-               labelCardHolder: "label card holder",
-               labelExpiredDate: "label expired card",
+              chipColor: Colors.yellow,
+              labelCardHolder: "label card holder",
+              labelExpiredDate: "label expired card",
 
               // cardType: CardType.mastercard,
 
@@ -98,8 +96,6 @@ class _CreditCardPageState extends State<CreditCardPage> {
                 var a = 5;
               },
             ),
-
-
 
             // CreditCardForm(
             //   formKey: formKey, // Required
@@ -141,8 +137,6 @@ class _CreditCardPageState extends State<CreditCardPage> {
             //     labelText: 'Card Holder',
             //   ),
             // ),
-
-
           ],
         ),
       ),

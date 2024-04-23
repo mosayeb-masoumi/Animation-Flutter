@@ -61,13 +61,11 @@ class CustomScrollExample3 extends StatelessWidget {
                   ),
                 ),
 
-
                 Container(
                   width: double.maxFinite,
                   height: 100,
                   color: Colors.red,
                 )
-
               ],
             ),
           )

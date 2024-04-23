@@ -1,4 +1,3 @@
-
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
@@ -7,17 +6,15 @@ import 'package:toggle_switch/toggle_switch.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 
-
-
 class AnimatedToggleSwitchPage extends StatefulWidget {
   const AnimatedToggleSwitchPage({super.key});
 
   @override
-  State<AnimatedToggleSwitchPage> createState() => _AnimatedToggleSwitchPageState();
+  State<AnimatedToggleSwitchPage> createState() =>
+      _AnimatedToggleSwitchPageState();
 }
 
 class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
-
   int value = 0;
   int? nullableValue;
   int? nullableValue2 = 0;
@@ -30,14 +27,17 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        padding: const EdgeInsets.all(30.0) ,
+        padding: const EdgeInsets.all(30.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 30,),
+              SizedBox(
+                height: 30,
+              ),
               Text("USE animated_toggle_switch library"),
-              SizedBox(height: 10,),
-
+              SizedBox(
+                height: 10,
+              ),
               AnimatedToggleSwitch<bool>.dual(
                 current: positive,
                 first: false,
@@ -66,9 +66,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                     ? Center(child: Text('Oh no...'))
                     : Center(child: Text('Nice :)')),
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<bool>.dual(
                 current: positive,
                 first: false,
@@ -104,15 +104,15 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 ),
                 textBuilder: (value) => value
                     ? const Center(
-                    child:
-                    Text('On', style: TextStyle(color: Colors.black)))
+                        child:
+                            Text('On', style: TextStyle(color: Colors.black)))
                     : const Center(
-                    child:
-                    Text('Off', style: TextStyle(color: Colors.white))),
+                        child:
+                            Text('Off', style: TextStyle(color: Colors.white))),
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               DefaultTextStyle.merge(
                 style: const TextStyle(
                     color: Colors.white,
@@ -137,35 +137,36 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                       }
                       return ToggleStyle(
                           backgroundGradient: LinearGradient(
-                            colors: [Colors.green, Colors.red[800]!],
-                            stops: [
-                              global.position -
-                                  (1 - 2 * max(0, global.position - 0.5)) * 0.7,
-                              global.position +
-                                  max(0, 2 * (global.position - 0.5)) * 0.7,
-                            ],
-                          ));
+                        colors: [Colors.green, Colors.red[800]!],
+                        stops: [
+                          global.position -
+                              (1 - 2 * max(0, global.position - 0.5)) * 0.7,
+                          global.position +
+                              max(0, 2 * (global.position - 0.5)) * 0.7,
+                        ],
+                      ));
                     },
                     borderWidth: 6.0,
                     height: 60.0,
                     loadingIconBuilder: (context, global) =>
                         CupertinoActivityIndicator(
-                            color: Color.lerp(
-                                Colors.red[800], Colors.green, global.position)),
+                            color: Color.lerp(Colors.red[800], Colors.green,
+                                global.position)),
                     onChanged: (b) => setState(() => positive = b),
                     iconBuilder: (value) => value
-                        ? const Icon(Icons.power_outlined, color: Colors.green, size: 32.0)
+                        ? const Icon(Icons.power_outlined,
+                            color: Colors.green, size: 32.0)
                         : Icon(Icons.power_settings_new_rounded,
-                        color: Colors.red[800], size: 32.0),
+                            color: Colors.red[800], size: 32.0),
                     textBuilder: (value) => value
                         ? const Center(child: Text('Active'))
                         : const Center(child: Text('Inactive')),
                   ),
                 ),
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               DefaultTextStyle.merge(
                 style: const TextStyle(color: Colors.white),
                 child: IconTheme.merge(
@@ -191,7 +192,7 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                     borderWidth: 10.0,
                     height: 50,
                     loadingIconBuilder: (context, global) =>
-                    const CupertinoActivityIndicator(color: Colors.white),
+                        const CupertinoActivityIndicator(color: Colors.white),
                     onChanged: (b) {
                       setState(() => positive = b);
                       return Future<dynamic>.delayed(Duration(seconds: 2));
@@ -203,15 +204,15 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                         : const Icon(Icons.tag_faces_rounded),
                     textBuilder: (value) => value
                         ? const Center(
-                        child: Text('Oh no...',
-                            style: TextStyle(color: Colors.white)))
+                            child: Text('Oh no...',
+                                style: TextStyle(color: Colors.white)))
                         : Center(child: Text('Nice :)')),
                   ),
                 ),
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<bool>.dual(
                 current: positive,
                 first: false,
@@ -225,13 +226,13 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 ),
                 customStyleBuilder: (context, local, global) => ToggleStyle(
                     backgroundGradient: LinearGradient(
-                      colors: [Colors.green, Colors.red],
-                      stops: [
-                        global.position -
-                            (1 - 2 * max(0, global.position - 0.5)) * 0.5,
-                        global.position + max(0, 2 * (global.position - 0.5)) * 0.5,
-                      ],
-                    )),
+                  colors: [Colors.green, Colors.red],
+                  stops: [
+                    global.position -
+                        (1 - 2 * max(0, global.position - 0.5)) * 0.5,
+                    global.position + max(0, 2 * (global.position - 0.5)) * 0.5,
+                  ],
+                )),
                 borderWidth: 6.0,
                 height: 60.0,
                 loadingIconBuilder: (context, global) =>
@@ -244,22 +245,21 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 },
                 iconBuilder: (value) => value
                     ? Icon(Icons.power_outlined,
-                    color: Colors.green, size: 32.0)
+                        color: Colors.green, size: 32.0)
                     : Icon(Icons.power_settings_new_rounded,
-                    color: Colors.red, size: 32.0),
+                        color: Colors.red, size: 32.0),
                 textBuilder: (value) => Center(
                     child: Text(
-                      value ? 'On' : 'Off',
-                      style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.w600),
-                    )),
+                  value ? 'On' : 'Off',
+                  style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.w600),
+                )),
               ),
-
-              SizedBox(height: 5,),
-
-
+              SizedBox(
+                height: 5,
+              ),
               DefaultTextStyle.merge(
                 style: const TextStyle(
                     color: Colors.white,
@@ -280,34 +280,33 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                       backgroundColor: Colors.black,
                     ),
                     styleBuilder: (value) => ToggleStyle(
-                        backgroundColor: value ? Colors.green : Colors.red[800]),
+                        backgroundColor:
+                            value ? Colors.green : Colors.red[800]),
                     borderWidth: 6.0,
                     height: 60.0,
                     loadingIconBuilder: (context, global) =>
                         CupertinoActivityIndicator(
-                            color: Color.lerp(
-                                Colors.red[800], Colors.green, global.position)),
+                            color: Color.lerp(Colors.red[800], Colors.green,
+                                global.position)),
                     onChanged: (b) => setState(() => positive = b),
                     iconBuilder: (value) => value
                         ? Icon(Icons.lightbulb_outline_rounded,
-                        color: Colors.green, size: 28.0)
+                            color: Colors.green, size: 28.0)
                         : Icon(Icons.power_settings_new_rounded,
-                        color: Colors.red[800], size: 30.0),
+                            color: Colors.red[800], size: 30.0),
                     textBuilder: (value) => value
                         ? Align(
-                        alignment: AlignmentDirectional.centerStart,
-                        child: Text('Active'))
+                            alignment: AlignmentDirectional.centerStart,
+                            child: Text('Active'))
                         : Align(
-                        alignment: AlignmentDirectional.centerEnd,
-                        child: Text('Inactive')),
+                            alignment: AlignmentDirectional.centerEnd,
+                            child: Text('Inactive')),
                   ),
                 ),
               ),
-
-
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int>.size(
                 current: min(value, 2),
                 style: ToggleStyle(
@@ -326,8 +325,8 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 spacing: 2.0,
                 customSeparatorBuilder: (context, local, global) {
                   final opacity =
-                  ((global.position - local.position).abs() - 0.5)
-                      .clamp(0.0, 1.0);
+                      ((global.position - local.position).abs() - 0.5)
+                          .clamp(0.0, 1.0);
                   return VerticalDivider(
                       indent: 10.0,
                       endIndent: 10.0,
@@ -344,8 +343,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 borderWidth: 0.0,
                 onChanged: (i) => setState(() => value = i),
               ),
-
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int?>.rolling(
                 allowUnlistedValues: true,
                 styleAnimationType: AnimationType.onHover,
@@ -360,8 +360,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   return ToggleStyle(borderColor: color, indicatorColor: color);
                 },
               ),
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int>.rolling(
                 current: value,
                 indicatorIconScale: sqrt2,
@@ -372,8 +373,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 },
                 iconBuilder: rollingIconBuilder,
               ),
-
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int?>.rolling(
                 allowUnlistedValues: true,
                 styleAnimationType: AnimationType.onHover,
@@ -388,9 +390,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   return ToggleStyle(borderColor: color, indicatorColor: color);
                 },
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int>.rolling(
                 active: true,
                 current: value,
@@ -425,9 +427,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   ],
                 ),
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               IconTheme.merge(
                 data: IconThemeData(color: Colors.white),
                 child: AnimatedToggleSwitch<int>.rolling(
@@ -459,8 +461,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   ),
                 ),
               ),
-
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int>.rolling(
                 current: value,
                 allowUnlistedValues: true,
@@ -479,8 +482,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 spacing: 20.0,
                 loading: loading,
               ),
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int?>.rolling(
                 current: nullableValue2,
                 allowUnlistedValues: true,
@@ -496,16 +500,16 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 style: ToggleStyle(
                   indicatorColor: Colors.white,
                   backgroundGradient:
-                  const LinearGradient(colors: [Colors.red, Colors.blue]),
+                      const LinearGradient(colors: [Colors.red, Colors.blue]),
                   borderColor: Colors.transparent,
                 ),
                 height: 55,
                 spacing: 20.0,
                 loading: loading,
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               CustomAnimatedToggleSwitch<bool>(
                 current: positive,
                 values: [false, true],
@@ -530,12 +534,10 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                           height: 20.0,
                           child: DecoratedBox(
                             decoration: BoxDecoration(
-                              color: Color.lerp(
-                                  Colors.black26,
-                                  Colors.blueAccent,
-                                  global.position),
+                              color: Color.lerp(Colors.black26,
+                                  Colors.blueAccent, global.position),
                               borderRadius:
-                              const BorderRadius.all(Radius.circular(50.0)),
+                                  const BorderRadius.all(Radius.circular(50.0)),
                             ),
                           )),
                       child,
@@ -548,7 +550,7 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                     child: DecoratedBox(
                       decoration: BoxDecoration(
                         color: Color.lerp(
-                            Colors.white,  Colors.blueAccent, global.position),
+                            Colors.white, Colors.blueAccent, global.position),
                         borderRadius: BorderRadius.all(Radius.circular(50.0)),
                         boxShadow: const [
                           BoxShadow(
@@ -562,9 +564,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   );
                 },
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int>.size(
                 current: value,
                 values: const [0, 1, 2, 3],
@@ -590,7 +592,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   return Future<dynamic>.delayed(Duration(seconds: 1));
                 },
               ),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int>.size(
                 textDirection: TextDirection.rtl,
                 current: value,
@@ -617,8 +621,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                     ToggleStyle(indicatorColor: colorBuilder(i)),
                 onChanged: (i) => setState(() => value = i),
               ),
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<bool>.size(
                 current: positive,
                 values: const [false, true],
@@ -647,9 +652,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 selectedIconScale: 1.0,
                 onChanged: (b) => setState(() => positive = b),
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int>.size(
                 textDirection: TextDirection.rtl,
                 current: value,
@@ -668,12 +673,12 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 style: ToggleStyle(borderColor: Colors.grey),
                 styleBuilder: (i) => ToggleStyle(
                     indicatorColor:
-                    i.isEven == true ? Colors.amber : Colors.red),
+                        i.isEven == true ? Colors.amber : Colors.red),
                 onChanged: (i) => setState(() => value = i),
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int>.size(
                 current: value,
                 values: const [0, 1, 2, 3],
@@ -702,11 +707,12 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 ),
                 styleBuilder: (i) => ToggleStyle(
                     indicatorColor:
-                    i.isEven == true ? Colors.green : Colors.tealAccent),
+                        i.isEven == true ? Colors.green : Colors.tealAccent),
                 onChanged: (i) => setState(() => value = i),
               ),
-
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               AnimatedToggleSwitch<int>.rollingByHeight(
                 height: 50.0,
                 current: value,
@@ -726,7 +732,6 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 style: ToggleStyle(borderRadius: BorderRadius.circular(75.0)),
               ),
               SizedBox(height: 5.0),
-
               AnimatedToggleSwitch<int>.rollingByHeight(
                 height: 50.0,
                 current: value,
@@ -736,18 +741,16 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 indicatorSize: const Size.square(1),
                 style: ToggleStyle(borderRadius: BorderRadius.circular(75.0)),
               ),
-              SizedBox(height: 5,),
-
-
-
-
-
-
-
-
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 5,
+              ),
+              SizedBox(
+                height: 10,
+              ),
               Text("USE toggle_switch library"),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               ToggleSwitch(
                 initialLabelIndex: 0,
                 totalSwitches: 3,
@@ -756,7 +759,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   print('switched to: $index');
                 },
               ),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
                 minWidth: 90.0,
                 minHeight: 50.0,
@@ -772,25 +777,29 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   print('switched to: $index');
                 },
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
-                customWidths: [90.0, 40.0 ],
+                customWidths: [90.0, 40.0],
                 cornerRadius: 20.0,
-                activeBgColors: [[Colors.cyan], [Colors.redAccent]],
+                activeBgColors: [
+                  [Colors.cyan],
+                  [Colors.redAccent]
+                ],
                 activeFgColor: Colors.white,
                 inactiveBgColor: Colors.grey,
                 inactiveFgColor: Colors.white,
-                totalSwitches:  2,
-                labels: ['YES', '' ],
-                icons: [null, FontAwesomeIcons.times ],
+                totalSwitches: 2,
+                labels: ['YES', ''],
+                icons: [null, FontAwesomeIcons.times],
                 onToggle: (index) {
                   print('switched to: $index');
                 },
               ),
-
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
                 minWidth: 90.0,
                 initialLabelIndex: 1,
@@ -801,14 +810,17 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 totalSwitches: 2,
                 labels: ['Male', 'Female'],
                 icons: [FontAwesomeIcons.mars, FontAwesomeIcons.venus],
-                activeBgColors: [[Colors.blue],[Colors.pink]],
+                activeBgColors: [
+                  [Colors.blue],
+                  [Colors.pink]
+                ],
                 onToggle: (index) {
                   print('switched to: $index');
                 },
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
                 minWidth: 90.0,
                 minHeight: 50.0,
@@ -826,14 +838,18 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                 iconSize: 30.0,
                 borderWidth: 2.0,
                 borderColor: [Colors.blueGrey],
-                activeBgColors: [[Colors.blue], [Colors.pink], [Colors.purple]],
+                activeBgColors: [
+                  [Colors.blue],
+                  [Colors.pink],
+                  [Colors.purple]
+                ],
                 onToggle: (index) {
                   print('switched to: $index');
                 },
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
                 minWidth: 90.0,
                 minHeight: 70.0,
@@ -849,16 +865,33 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   FontAwesomeIcons.instagram
                 ],
                 iconSize: 30.0,
-                borderColor: [Color(0xff3b5998), Color(0xff8b9dc3), Color(0xff00aeff), Color(0xff0077f2), Color(0xff962fbf), Color(0xff4f5bd5)],
+                borderColor: [
+                  Color(0xff3b5998),
+                  Color(0xff8b9dc3),
+                  Color(0xff00aeff),
+                  Color(0xff0077f2),
+                  Color(0xff962fbf),
+                  Color(0xff4f5bd5)
+                ],
                 dividerColor: Colors.blueGrey,
-                activeBgColors: [[Color(0xff3b5998), Color(0xff8b9dc3)], [Color(0xff00aeff), Color(0xff0077f2)], [Color(0xfffeda75), Color(0xfffa7e1e), Color(0xffd62976), Color(0xff962fbf), Color(0xff4f5bd5)]],
+                activeBgColors: [
+                  [Color(0xff3b5998), Color(0xff8b9dc3)],
+                  [Color(0xff00aeff), Color(0xff0077f2)],
+                  [
+                    Color(0xfffeda75),
+                    Color(0xfffa7e1e),
+                    Color(0xffd62976),
+                    Color(0xff962fbf),
+                    Color(0xff4f5bd5)
+                  ]
+                ],
                 onToggle: (index) {
                   print('switched to: $index');
                 },
               ),
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
                 minWidth: 90.0,
                 minHeight: 70.0,
@@ -873,22 +906,29 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   FontAwesomeIcons.solidLightbulb,
                 ],
                 iconSize: 30.0,
-                activeBgColors: [[Colors.black45, Colors.black26], [Colors.yellow, Colors.orange]],
-                animate: true, // with just animate set to true, default curve = Curves.easeIn
-                curve: Curves.easeIn, // animate must be set to true when using custom curve
+                activeBgColors: [
+                  [Colors.black45, Colors.black26],
+                  [Colors.yellow, Colors.orange]
+                ],
+                animate:
+                    true, // with just animate set to true, default curve = Curves.easeIn
+                curve: Curves
+                    .easeIn, // animate must be set to true when using custom curve
                 animationDuration: 200,
                 onToggle: (index) {
                   print('switched to: $index');
                 },
               ),
-
-
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
                 minWidth: 90.0,
                 cornerRadius: 20.0,
-                activeBgColors: [[Colors.green[800]!], [Colors.red[800]!]],
+                activeBgColors: [
+                  [Colors.green[800]!],
+                  [Colors.red[800]!]
+                ],
                 activeFgColor: Colors.white,
                 inactiveBgColor: Colors.grey,
                 inactiveFgColor: Colors.white,
@@ -900,8 +940,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   print('switched to: $index');
                 },
               ),
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
                 minWidth: 90.0,
                 cornerRadius: 20.0,
@@ -925,7 +966,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   print('switched to: $index');
                 },
               ),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
                 minWidth: 90.0,
                 minHeight: 90.0,
@@ -959,7 +1002,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   print('switched to: $index');
                 },
               ),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
                 activeBorders: [
                   Border.all(
@@ -996,7 +1041,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   print('switched to: $index');
                 },
               ),
-              SizedBox(height: 5,),
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
                 activeBorders: [
                   Border.all(
@@ -1033,19 +1080,16 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   print('switched to: $index');
                 },
               ),
-              SizedBox(height: 5,),
-
+              SizedBox(
+                height: 5,
+              ),
               ToggleSwitch(
                 initialLabelIndex: 0,
                 minHeight: 100.0,
                 minWidth: 100.0,
                 activeBgColor: [Colors.blueAccent.shade200],
                 activeFgColor: Colors.yellow,
-                customTextStyles: [
-                  TextStyle(
-                      fontSize: 15.0
-                  )
-                ],
+                customTextStyles: [TextStyle(fontSize: 15.0)],
                 multiLineText: true,
                 centerText: true,
                 totalSwitches: 2,
@@ -1054,23 +1098,19 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   print('switched to: $index');
                 },
               ),
-
             ],
           ),
         ),
-
       ),
     );
   }
 
-
-
   Color colorBuilder(int value) => switch (value) {
-    0 => Colors.blueAccent,
-    1 => Colors.green,
-    2 => Colors.orangeAccent,
-    _ => Colors.red,
-  };
+        0 => Colors.blueAccent,
+        1 => Colors.green,
+        2 => Colors.orangeAccent,
+        _ => Colors.red,
+      };
 
   Widget coloredRollingIconBuilder(int value, bool foreground) {
     final color = foreground ? colorBuilder(value) : null;
@@ -1089,11 +1129,11 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
   }
 
   IconData iconDataByValue(int? value) => switch (value) {
-    0 => Icons.access_time_rounded,
-    1 => Icons.check_circle_outline_rounded,
-    2 => Icons.power_settings_new_rounded,
-    _ => Icons.lightbulb_outline_rounded,
-  };
+        0 => Icons.access_time_rounded,
+        1 => Icons.check_circle_outline_rounded,
+        2 => Icons.power_settings_new_rounded,
+        _ => Icons.lightbulb_outline_rounded,
+      };
 
   Widget sizeIconBuilder(BuildContext context,
       AnimatedToggleProperties<int> local, GlobalToggleProperties<int> global) {
@@ -1125,14 +1165,6 @@ const tappableTextStyle = TextStyle(color: Colors.blue);
 
 final toggleSwitchUrl = Uri.parse('https://pub.dev/packages/toggle_switch');
 final liteRollingSwitchUrl =
-Uri.parse('https://pub.dev/packages/lite_rolling_switch');
+    Uri.parse('https://pub.dev/packages/lite_rolling_switch');
 final crazySwitchUrl =
-Uri.parse('https://github.com/pedromassango/crazy-switch');
-
-
-
-
-
-
-
-
+    Uri.parse('https://github.com/pedromassango/crazy-switch');

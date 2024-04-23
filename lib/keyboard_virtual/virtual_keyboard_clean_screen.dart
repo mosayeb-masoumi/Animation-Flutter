@@ -44,7 +44,10 @@ class _VirtualKeyboardCleanScreenState
                   color: Colors.redAccent,
                 ),
                 showRightIcon: true,
-                leftIconReset: const Icon(Icons.refresh, color: Colors.redAccent,),
+                leftIconReset: const Icon(
+                  Icons.refresh,
+                  color: Colors.redAccent,
+                ),
                 showLeftIcon: true,
 
                 // dividerColor: Colors.red,

@@ -1,4 +1,3 @@
-
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -12,7 +11,6 @@ class PinCodeFieldsExample extends StatefulWidget {
 }
 
 class _PinCodeFieldsExampleState extends State<PinCodeFieldsExample> {
-
   TextEditingController textEditingController = TextEditingController();
   StreamController<ErrorAnimationType>? errorController;
 
@@ -48,7 +46,6 @@ class _PinCodeFieldsExampleState extends State<PinCodeFieldsExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: GestureDetector(
         onTap: () {},
         child: SizedBox(
@@ -65,7 +62,6 @@ class _PinCodeFieldsExampleState extends State<PinCodeFieldsExample> {
                   textAlign: TextAlign.center,
                 ),
               ),
-
               const SizedBox(
                 height: 20,
               ),
@@ -146,11 +142,9 @@ class _PinCodeFieldsExampleState extends State<PinCodeFieldsExample> {
                   ),
                 ),
               ),
-
-
               Container(
                 margin:
-                const EdgeInsets.symmetric(vertical: 16.0, horizontal: 30),
+                    const EdgeInsets.symmetric(vertical: 16.0, horizontal: 30),
                 decoration: BoxDecoration(
                     color: Colors.green.shade300,
                     borderRadius: BorderRadius.circular(5),
@@ -176,7 +170,7 @@ class _PinCodeFieldsExampleState extends State<PinCodeFieldsExample> {
                         setState(() => hasError = true);
                       } else {
                         setState(
-                              () {
+                          () {
                             hasError = false;
                             snackBar("OTP Verified!!");
                           },

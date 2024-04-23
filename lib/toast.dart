@@ -4,17 +4,13 @@ import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class ToastPage extends StatefulWidget {
-
-
-  const ToastPage({Key? key})
-      : super(key: key);
+  const ToastPage({Key? key}) : super(key: key);
 
   @override
   State<ToastPage> createState() => _ToastPageState();
 }
 
 class _ToastPageState extends State<ToastPage> {
-
   late FToast fToast;
 
   showCustomToast() {
@@ -28,16 +24,14 @@ class _ToastPageState extends State<ToastPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-
-
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("sdjfasjdfjab" ,),
+            child: Text(
+              "sdjfasjdfjab",
+            ),
           )
-
         ],
       ),
-
     );
 
     fToast.showToast(
@@ -53,7 +47,6 @@ class _ToastPageState extends State<ToastPage> {
     fToast = FToast();
     fToast.init(context);
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +65,6 @@ class _ToastPageState extends State<ToastPage> {
               },
             ),
           ),
-        )
-    );
+        ));
   }
 }

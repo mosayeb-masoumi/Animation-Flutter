@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
@@ -30,18 +29,18 @@ class _GlassmorphismPageState extends State<GlassmorphismPage> {
             SafeArea(
                 child: Center(
               child: GlassmorphicContainer(
-                width: size.width * (3/4),
-                height: size.height * (3/4),
+                width: size.width * (3 / 4),
+                height: size.height * (3 / 4),
                 borderRadius: 20,
                 blur: 5,
                 linearGradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      Color(0xFFffffff).withOpacity(0.1),
-                      Color(0xFFFFFFFF).withOpacity(0.05),
-                    ],
-                    // stops: [0.1, 1,]
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xFFffffff).withOpacity(0.1),
+                    Color(0xFFFFFFFF).withOpacity(0.05),
+                  ],
+                  // stops: [0.1, 1,]
                 ),
                 border: 1,
                 borderGradient: LinearGradient(
@@ -53,7 +52,12 @@ class _GlassmorphismPageState extends State<GlassmorphismPage> {
                   ],
                 ),
                 child: Container(
-                  child: Center(child: Text("This is GlassMorphisem" , style: TextStyle(color: Colors.white),),),
+                  child: Center(
+                    child: Text(
+                      "This is GlassMorphisem",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
                 ),
               ),
             ))
