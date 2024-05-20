@@ -12,6 +12,7 @@ import 'package:flutter_animation/badges_page.dart';
 import 'package:flutter_animation/banner-example.dart';
 import 'package:flutter_animation/chart/chart_page.dart';
 import 'package:flutter_animation/checkbox_listtile.dart';
+import 'package:flutter_animation/chips/chips_page.dart';
 import 'package:flutter_animation/circle_list_menu_page.dart';
 import 'package:flutter_animation/circle_menu_page.dart';
 import 'package:flutter_animation/clipper/clipper_example.dart';
@@ -284,6 +285,15 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("CircleListMenuPage")),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChipsPage()),
+                        );
+                      },
+                      child: Text("ChipsPage")),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(

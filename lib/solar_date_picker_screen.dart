@@ -81,10 +81,10 @@ class _ISolarDatePickerScreenState extends State<ISolarDatePickerScreen> {
               textDirection: TextDirection.rtl,
               initialDate: pickedDate ?? DateTime.now(),
               locale: Locale('fa', 'IR'),
-              firstDate: DateTime.now()
-                  .subtract(Duration(days: 10 * 365)), // show last 10 years
-              lastDate: DateTime.now()
-                  .add(Duration(days: 10 * 365)), // show next 10 years
+              // firstDate: DateTime.now().subtract(Duration(days: 10 * 365)), // show last 10 years
+              firstDate: DateTime(2014,3,21),
+              // lastDate: DateTime.now().add(Duration(days: 10 * 365)), // show next 10 years
+              lastDate: DateTime(2025,3,21),
               isPersian: true,
               selectableDayPredicate: (day) {
                 return true;
