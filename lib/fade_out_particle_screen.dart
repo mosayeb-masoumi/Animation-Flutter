@@ -37,9 +37,9 @@ class _FadeOutParticleScreenState extends State<FadeOutParticleScreen> {
                     const SizedBox(width: 8),
                     Text(
                       'Fade out Particle',
-                      style: Theme.of(context).textTheme.headline6?.copyWith(
-                            fontWeight: FontWeight.w900,
-                          ),
+                      // style: Theme.of(context).textTheme.headline6?.copyWith(
+                      //       fontWeight: FontWeight.w900,
+                      //     ),
                     ),
                   ],
                 ),

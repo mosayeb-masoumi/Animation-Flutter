@@ -39,10 +39,10 @@ class _ExpansionTileCardPageState extends State<ExpansionTileCardPage> {
                   child: Text(
                     "FlutterDevs specializes in creating cost-effective and efficient applications with our perfectly crafted,"
                     " creative and leading-edge flutter app development solutions for customers all around the globe.",
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText2!
-                        .copyWith(fontSize: 16),
+                    // style: Theme.of(context)
+                    //     .textTheme
+                    //     .bodyText2!
+                    //     .copyWith(fontSize: 16),
                   ),
                 ),
               ),
