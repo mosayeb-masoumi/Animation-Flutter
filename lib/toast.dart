@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+// import 'package:fluttertoast/fluttertoast.dart';
 
 class ToastPage extends StatefulWidget {
   const ToastPage({Key? key}) : super(key: key);
@@ -11,7 +11,7 @@ class ToastPage extends StatefulWidget {
 }
 
 class _ToastPageState extends State<ToastPage> {
-  late FToast fToast;
+  // late FToast fToast;
 
   showCustomToast() {
     Widget toast = Container(
@@ -34,18 +34,18 @@ class _ToastPageState extends State<ToastPage> {
       ),
     );
 
-    fToast.showToast(
-      child: toast,
-      gravity: ToastGravity.TOP,
-      toastDuration: const Duration(seconds: 3),
-    );
+    // fToast.showToast(
+    //   child: toast,
+    //   // gravity: ToastGravity.TOP,
+    //   toastDuration: const Duration(seconds: 3),
+    // );
   }
 
   @override
   void initState() {
     super.initState();
-    fToast = FToast();
-    fToast.init(context);
+    // fToast = FToast();
+    // fToast.init(context);
   }
 
   @override

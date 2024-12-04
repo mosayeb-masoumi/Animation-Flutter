@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/home_page.dart';
+import 'package:flutter_animation/home_test_page.dart';
 
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      // home: HomeTestPage(),
     );
   }
 }

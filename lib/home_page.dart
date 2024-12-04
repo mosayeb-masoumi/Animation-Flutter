@@ -34,6 +34,7 @@ import 'package:flutter_animation/fade_out_particle_screen.dart';
 import 'package:flutter_animation/flip_card_page.dart';
 import 'package:flutter_animation/flutter_slidable_screen.dart';
 import 'package:flutter_animation/glassmorphism_page.dart';
+import 'package:flutter_animation/globe/globe_screen.dart';
 import 'package:flutter_animation/grid_tile_page.dart';
 import 'package:flutter_animation/hero_transition_animation_page.dart';
 import 'package:flutter_animation/indexed_stack_page.dart';
@@ -816,6 +817,18 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Wrap Chip Page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GlobeScreen()),
+                        );
+                      },
+                      child: Text("Globe page")),
+
+
                 ],
               ),
             ),

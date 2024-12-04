@@ -51,7 +51,7 @@ dependencies:
   advanced_icon: ^0.1.2
   star_menu: ^3.0.0+2
   expandable_text: ^2.3.0
-  fluttertoast: ^8.1.1
+#  fluttertoast: ^8.1.1
 #  fluttertoast: ^8.2.2
   dotted_border: ^2.0.0+3
   dropdown_button2: ^2.1.3
