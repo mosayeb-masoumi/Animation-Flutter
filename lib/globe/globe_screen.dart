@@ -1,4 +1,5 @@
 
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/globe/globe.dart';
 import 'package:flutter_animation/globe/tech_stack_icons.dart';
@@ -44,6 +45,11 @@ class GlobeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // Get icons using the helper
     final icons = TechStackIcons.getIconsFromSlugs(slugs);
+
+    List<String?> filtered = [];
+    filtered.addAll(slugs.where((element) => element.startsWith('g')));
+   // filtered.add(slugs.firstWhereOrNull((element) => element.startsWith("g"),)) ;
+
 
     return Center(
       child: Container(
