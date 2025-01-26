@@ -146,7 +146,7 @@ class _StarMenuPageState extends State<StarMenuPage> {
               alignment: Alignment.centerRight,
               child: StarMenu(
                 params: StarMenuParameters.arc(
-                  context,
+                  // context as ArcType,
                   ArcType.semiLeft,
                   radiusX: 110,
                   radiusY: 200,

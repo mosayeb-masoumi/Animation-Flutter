@@ -114,7 +114,7 @@ class _LoadingAnimationExampleState extends State<LoadingAnimationExample> {
                 LoadingAnimationWidget.inkDrop(color: Colors.red, size: 50),
                 LoadingAnimationWidget.newtonCradle(
                     color: Colors.blue, size: 50),
-                LoadingAnimationWidget.prograssiveDots(
+                LoadingAnimationWidget.progressiveDots(
                     color: Colors.red, size: 50),
                 LoadingAnimationWidget.staggeredDotsWave(
                     color: Colors.blue, size: 50),
