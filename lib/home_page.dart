@@ -45,6 +45,7 @@ import 'package:flutter_animation/like_button_page.dart';
 import 'package:flutter_animation/liquid_pull_to_refresh.dart';
 import 'package:flutter_animation/loading_animation.dart';
 import 'package:flutter_animation/local_hero_transform_folder/local_hero_transform_screen.dart';
+import 'package:flutter_animation/lottie/lottie_screen.dart';
 import 'package:flutter_animation/moving_border_color.dart';
 import 'package:flutter_animation/neomorphism/nepmorphism_page.dart';
 import 'package:flutter_animation/pin_code_fields_example.dart';
@@ -839,6 +840,16 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("LocalHeroTransform page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LottieScreen()),
+                        );
+                      },
+                      child: Text("Lottie page")),
 
 
 

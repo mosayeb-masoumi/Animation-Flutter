@@ -108,6 +108,8 @@ dependencies:
 
   loading_animations: ^2.2.0
 
+  lottie: ^3.3.1
+
 
   fade_out_particle:
     path: packages/fade_out_particle
@@ -159,6 +161,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/animations/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
