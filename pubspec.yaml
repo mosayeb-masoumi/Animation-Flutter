@@ -110,6 +110,8 @@ dependencies:
 
   lottie: ^3.3.1
 
+  motion_tab_bar: ^2.0.4
+
 
   fade_out_particle:
     path: packages/fade_out_particle
