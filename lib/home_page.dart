@@ -62,6 +62,7 @@ import 'package:flutter_animation/slide_switcher_pahe.dart';
 import 'package:flutter_animation/slider_page.dart';
 import 'package:flutter_animation/sliver_tabbar.dart';
 import 'package:flutter_animation/solar_date_picker_screen.dart';
+import 'package:flutter_animation/stagger_animation_screen/stagger_animation_screen.dart';
 import 'package:flutter_animation/star_menu.dart';
 import 'package:flutter_animation/stepper_page.dart';
 import 'package:flutter_animation/sticky_headers_example.dart';
@@ -861,6 +862,17 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("MotionTabBar page")),
+
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const StaggerAnimationScreen()),
+                        );
+                      },
+                      child: Text("Stagger Animation page")),
 
                 ],
               ),

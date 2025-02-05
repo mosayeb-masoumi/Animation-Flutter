@@ -129,6 +129,10 @@ dependencies:
 
   collection: ^1.18.0
 
+  add_to_cart_animation: ^2.0.4
+
+  flutter_staggered_animations: ^1.1.1
+
 
   solar_datepicker:
     path: packages/solar_datepicker
