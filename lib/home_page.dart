@@ -49,6 +49,7 @@ import 'package:flutter_animation/lottie/lottie_screen.dart';
 import 'package:flutter_animation/motion_tab_bar_example/motion_tab_bar_screen.dart';
 import 'package:flutter_animation/moving_border_color.dart';
 import 'package:flutter_animation/neomorphism/nepmorphism_page.dart';
+import 'package:flutter_animation/pager_view/carousel_slider_screen.dart';
 import 'package:flutter_animation/pin_code_fields_example.dart';
 import 'package:flutter_animation/popup_menu_item.dart';
 import 'package:flutter_animation/positioned_screen.dart';
@@ -61,6 +62,7 @@ import 'package:flutter_animation/shimmer_image_cache.dart';
 import 'package:flutter_animation/slide_switcher_pahe.dart';
 import 'package:flutter_animation/slider_page.dart';
 import 'package:flutter_animation/sliver_tabbar.dart';
+import 'package:flutter_animation/pager_view/smooth_page_indicator_screen.dart';
 import 'package:flutter_animation/solar_date_picker_screen.dart';
 import 'package:flutter_animation/stagger_animation_screen/stagger_animation_screen.dart';
 import 'package:flutter_animation/star_menu.dart';
@@ -873,6 +875,27 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Stagger Animation page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SmoothPageIndicatorScreen()),
+                        );
+                      },
+                      child: Text("SmoothPageIndicator page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CarouselSliderScreen()),
+                        );
+                      },
+                      child: Text("CarouselSlider page")),
+
 
                 ],
               ),
