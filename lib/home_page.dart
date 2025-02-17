@@ -51,6 +51,7 @@ import 'package:flutter_animation/motion_tab_bar_example/motion_tab_bar_screen.d
 import 'package:flutter_animation/moving_border_color.dart';
 import 'package:flutter_animation/neomorphism/nepmorphism_page.dart';
 import 'package:flutter_animation/pager_view/carousel_slider_screen.dart';
+import 'package:flutter_animation/photo_view_example.dart';
 import 'package:flutter_animation/pin_code_fields_example.dart';
 import 'package:flutter_animation/popup_menu_item.dart';
 import 'package:flutter_animation/positioned_screen.dart';
@@ -84,6 +85,7 @@ import 'custom_scroll_view_examples/custom_sroll_view_examples.dart';
 import 'date_picker_example/data_picker_example.dart';
 import 'expansion_tile_page.dart';
 import 'keyboard_virtual/virtual_keyboard.dart';
+import 'list_wheel_scroll_view_ page.dart';
 import 'longpress_draggable_page.dart';
 import 'matrix_transition_example.dart';
 
@@ -896,6 +898,28 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("CarouselSlider page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const PhotoViewExample()),
+                        );
+                      },
+                      child: Text("PhotoView page")),
+
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ListViewScrollViewPage()),
+                        );
+                      },
+                      child: Text("ListViewScrollView page")),
+
 
 
                 ],
