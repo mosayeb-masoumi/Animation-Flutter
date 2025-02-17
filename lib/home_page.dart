@@ -36,7 +36,8 @@ import 'package:flutter_animation/flutter_slidable_screen.dart';
 import 'package:flutter_animation/glassmorphism_page.dart';
 import 'package:flutter_animation/globe/globe_screen.dart';
 import 'package:flutter_animation/grid_tile_page.dart';
-import 'package:flutter_animation/hero_transition_animation_page.dart';
+import 'package:flutter_animation/hero/hero_screen.dart';
+import 'package:flutter_animation/hero/hero_transition_animation_page.dart';
 import 'package:flutter_animation/indexed_stack_page.dart';
 import 'package:flutter_animation/interactive_viewer_pahe.dart';
 import 'package:flutter_animation/keyboard_virtual/virtual_keyboard_clean_screen.dart';
@@ -496,7 +497,7 @@ class _HomePageState extends State<HomePage> {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  const HeroTransitionAnimationPage()),
+                                  const HeroScreen()),
                         );
                       },
                       child: Text("Hero Transition Animation Page")),
