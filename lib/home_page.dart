@@ -47,6 +47,7 @@ import 'package:flutter_animation/liquid_pull_to_refresh.dart';
 import 'package:flutter_animation/loading_animation.dart';
 import 'package:flutter_animation/local_hero_transform_folder/local_hero_transform_screen.dart';
 import 'package:flutter_animation/lottie/lottie_screen.dart';
+import 'package:flutter_animation/more_screen.dart';
 import 'package:flutter_animation/motion_tab_bar_example/motion_tab_bar_screen.dart';
 import 'package:flutter_animation/moving_border_color.dart';
 import 'package:flutter_animation/neomorphism/nepmorphism_page.dart';
@@ -919,6 +920,16 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("ListViewScrollView page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const MoreScreen()),
+                        );
+                      },
+                      child: Text("More page")),
 
 
 
