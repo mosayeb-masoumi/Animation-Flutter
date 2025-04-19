@@ -313,25 +313,26 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                   backgroundColor: Color(0xFF919191),
                   indicatorColor: Color(0xFFEC3345),
                   borderColor: Colors.transparent,
-                  borderRadius: BorderRadius.circular(10.0),
+                  borderRadius: BorderRadius.circular(20.0),
                   indicatorBorderRadius: BorderRadius.zero,
                 ),
+                animationDuration: Duration(milliseconds: 300),
                 values: const [0, 1, 2],
                 iconOpacity: 1.0,
                 selectedIconScale: 1.0,
                 indicatorSize: const Size.fromWidth(100),
-                iconAnimationType: AnimationType.onHover,
-                styleAnimationType: AnimationType.onHover,
+                // iconAnimationType: AnimationType.onHover,
+                // styleAnimationType: AnimationType.onHover,
                 spacing: 2.0,
-                customSeparatorBuilder: (context, local, global) {
-                  final opacity =
-                      ((global.position - local.position).abs() - 0.5)
-                          .clamp(0.0, 1.0);
-                  return VerticalDivider(
-                      indent: 10.0,
-                      endIndent: 10.0,
-                      color: Colors.white38.withOpacity(opacity));
-                },
+                // customSeparatorBuilder: (context, local, global) {
+                //   final opacity =
+                //       ((global.position - local.position).abs() - 0.5)
+                //           .clamp(0.0, 1.0);
+                //   return VerticalDivider(
+                //       indent: 10.0,
+                //       endIndent: 10.0,
+                //       color: Colors.white38.withOpacity(opacity));
+                // },
                 customIconBuilder: (context, local, global) {
                   final text = const ['not', 'only', 'icons'][local.index];
                   return Center(
@@ -339,6 +340,9 @@ class _AnimatedToggleSwitchPageState extends State<AnimatedToggleSwitchPage> {
                           style: TextStyle(
                               color: Color.lerp(Colors.black, Colors.white,
                                   local.animationValue))));
+                },
+                styleBuilder: (value) {
+                  return ToggleStyle(borderRadius: BorderRadius.all(Radius.circular(30)));
                 },
                 borderWidth: 0.0,
                 onChanged: (i) => setState(() => value = i),

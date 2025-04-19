@@ -26,6 +26,7 @@ class _SlideSwitcherPageState extends State<SlideSwitcherPage> {
               children: [
                 Text('First'),
                 Text('Second'),
+                Text('third'),
               ],
               onSelect: (index) {},
               containerHeight: 40,
