@@ -15,7 +15,7 @@ import 'package:flutter_animation/checkbox_listtile.dart';
 import 'package:flutter_animation/chips/chips_page.dart';
 import 'package:flutter_animation/circle_list_menu_page.dart';
 import 'package:flutter_animation/circle_menu_page.dart';
-import 'package:flutter_animation/clipper/clipper_example.dart';
+import 'package:flutter_animation/clipper_painter/clipper_painters_examples.dart';
 import 'package:flutter_animation/container_transformation_page.dart';
 import 'package:flutter_animation/credit_card_page.dart';
 import 'package:flutter_animation/cupertino_context_menu.dart';
@@ -318,7 +318,7 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ClipperExample()),
+                              builder: (context) => const ClipPaintersExamples()),
                         );
                       },
                       child: Text("ClipperExample")),

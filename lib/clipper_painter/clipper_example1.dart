@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ClipperExample extends StatefulWidget {
-  const ClipperExample({super.key});
+class ClipperExample1 extends StatefulWidget {
+  const ClipperExample1({super.key});
 
   @override
-  State<ClipperExample> createState() => _ClipperExampleState();
+  State<ClipperExample1> createState() => _ClipperExample1State();
 }
 
-class _ClipperExampleState extends State<ClipperExample> {
+class _ClipperExample1State extends State<ClipperExample1> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
