@@ -26,6 +26,7 @@ import 'package:flutter_animation/dismissible_item_listView_scroll_left.dart';
 import 'package:flutter_animation/dotted_border/dotted_border_page.dart';
 import 'package:flutter_animation/draggable_scrollable_sheet.dart';
 import 'package:flutter_animation/dropdown_button_page/dropdown_button_page.dart';
+import 'package:flutter_animation/elegant_notification_screen.dart';
 import 'package:flutter_animation/expandable_list_page.dart';
 import 'package:flutter_animation/expandable_text.dart';
 import 'package:flutter_animation/expansion_tile_card_page.dart';
@@ -930,6 +931,16 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("More page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ElegantNotificationScreen()),
+                        );
+                      },
+                      child: Text("Elegant Notification Screen")),
 
 
 

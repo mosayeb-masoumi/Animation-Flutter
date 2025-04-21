@@ -142,6 +142,8 @@ dependencies:
   smooth_page_indicator: ^1.2.0+3
   carousel_slider: ^5.0.0
 
+  elegant_notification: ^2.4.5
+
 
   solar_datepicker:
     path: packages/solar_datepicker
