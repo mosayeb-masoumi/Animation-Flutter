@@ -50,6 +50,14 @@ class _TabbarCustomizedScreenState extends State<TabbarCustomizedScreen> with Si
                   color: Colors.redAccent, // Background color for the selected tab
                   borderRadius: BorderRadius.circular(10), // Rounded corners
                 ),
+
+                unselectedLabelStyle: TextStyle(
+                  color: Colors.black
+                ),
+                labelStyle: TextStyle(
+                  color: Colors.white
+                ),
+
                 tabs: const [
                   Tab(
                     child: Center(child: Text('Tab 1')),
