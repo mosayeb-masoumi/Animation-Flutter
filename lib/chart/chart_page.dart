@@ -1,6 +1,5 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-// import 'package:syncfusion_flutter_charts/charts.dart';
-// import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
 class ChartPage extends StatefulWidget {
   const ChartPage({Key? key}) : super(key: key);
@@ -13,70 +12,235 @@ class _ChartPageState extends State<ChartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: [
-        SizedBox(
-          height: 20,
-        ),
-        SizedBox(
-            height: 200,
-            // child: SfCartesianChart(
-            //     // Initialize category axis
-            //     primaryXAxis: CategoryAxis(),
-            //     series: <LineSeries<SalesData, String>>[
-            //       LineSeries<SalesData, String>(
-            //           // Bind data source
-            //           dataSource: <SalesData>[
-            //             SalesData('Jan', 10),
-            //             SalesData('Feb', 12),
-            //             SalesData('Mar', 11),
-            //             SalesData('Apr', 7),
-            //             SalesData('May', 10)
-            //           ],
-            //           xValueMapper: (SalesData sales, _) => sales.year,
-            //           yValueMapper: (SalesData sales, _) => sales.sales)
-            //     ])
-              ),
-        const SizedBox(
-          height: 20,
-        ),
-        SizedBox(
-          height: 200,
-          width: 200,
-          // child: SfSparkLineChart.custom(
-          //   //Enable the trackball
-          //   trackball: const SparkChartTrackball(
-          //       activationMode: SparkChartActivationMode.tap),
-          //   //Enable marker
-          //   marker: const SparkChartMarker(
-          //       displayMode: SparkChartMarkerDisplayMode.all),
-          //   //Enable data label
-          //   labelDisplayMode: SparkChartLabelDisplayMode.all,
-          //   xValueMapper: (int index) => data[index].year,
-          //   yValueMapper: (int index) => data[index].sales,
-          //   dataCount: 5,
-          // ),
-        ),
-        const SizedBox(
-          height: 20,
-        ),
+      body: Container(
+        width: MediaQuery.sizeOf(context).width,
+        height: MediaQuery.sizeOf(context).height,
+        child: Column(
+          children: <Widget>[
+            const SizedBox(
+              height: 28,
+            ),
+            Container(
+                width: 200,
+                height: 200,
+                color: Colors.transparent,
+                child: Stack(
+                  children: [
+                    PieChart(
 
-      ],
-    ));
+                      PieChartData(
+
+                        sections: showingSections(),
+                        borderData: FlBorderData(show: true),
+                        centerSpaceRadius: 60,
+                        sectionsSpace: 2,
+                        titleSunbeamLayout: false,
+                        startDegreeOffset: 0
+                      ),
+                      duration: const Duration(seconds: 2000), // Optional
+                      curve: Curves.easeOutExpo,
+                      // Optional
+                    ),
+                    
+                    Center(child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text("hjjhjhjh"),
+                        Text("hjjhjhjh"),
+                      ],
+                    ))
+                  ],
+                ))
+          ],
+        ),
+      ),
+    );
   }
-}
 
-List<SalesData> data = [
-  SalesData('Jan', 35),
-  SalesData('Feb', 28),
-  SalesData('Mar', 34),
-  SalesData('Apr', 32),
-  SalesData('May', 40)
-];
+  List<PieChartSectionData> showingSections() {
+    return [
+      PieChartSectionData(
+        gradient: LinearGradient(colors: [Colors.blue , Colors.blue.shade100]),
+        // color: Colors.blue,
+        value: 70,
+        title: '',
+        radius: 35,
+        titleStyle: const TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      ),
+      PieChartSectionData(
+        titlePositionPercentageOffset: 0.4,
+        showTitle: true,
+        gradient: LinearGradient(colors: [Colors.red , Colors.red.shade100]),
+        badgeWidget: Container(width: 20,height: 20, color: Colors.green,),
+        borderSide: BorderSide(color: Colors.green , width: 2),
+        color: Colors.red,
+        value: 25,
+        title: '',
+        radius: 25,
+        titleStyle: const TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      ),
+    ];
+  }
 
-class SalesData {
-  SalesData(this.year, this.sales);
-
-  final String year;
-  final double sales;
+// int touchedIndex = -1;
+//
+// @override
+// Widget build(BuildContext context) {
+//   return Scaffold(
+//     body: AspectRatio(
+//       aspectRatio: 1.3,
+//       child: Row(
+//         children: <Widget>[
+//           const SizedBox(
+//             height: 18,
+//           ),
+//           Expanded(
+//             child: AspectRatio(
+//               aspectRatio: 1,
+//               child: PieChart(
+//                 PieChartData(
+//                   pieTouchData: PieTouchData(
+//                     touchCallback: (FlTouchEvent event, pieTouchResponse) {
+//                       setState(() {
+//                         if (!event.isInterestedForInteractions ||
+//                             pieTouchResponse == null ||
+//                             pieTouchResponse.touchedSection == null) {
+//                           touchedIndex = -1;
+//                           return;
+//                         }
+//                         touchedIndex = pieTouchResponse
+//                             .touchedSection!.touchedSectionIndex;
+//                       });
+//                     },
+//                   ),
+//                   borderData: FlBorderData(
+//                     show: false,
+//                   ),
+//                   sectionsSpace: 0,
+//                   centerSpaceRadius: 40,
+//                   sections: showingSections(),
+//                 ),
+//               ),
+//             ),
+//           ),
+//           const Column(
+//             mainAxisAlignment: MainAxisAlignment.end,
+//             crossAxisAlignment: CrossAxisAlignment.start,
+//             children: <Widget>[
+//               Indicator(
+//                 color: Colors.blue,
+//                 text: 'First',
+//                 isSquare: true,
+//               ),
+//               SizedBox(
+//                 height: 4,
+//               ),
+//               Indicator(
+//                 color: Colors.yellow,
+//                 text: 'Second',
+//                 isSquare: true,
+//               ),
+//               SizedBox(
+//                 height: 4,
+//               ),
+//               Indicator(
+//                 color: Colors.purple,
+//                 text: 'Third',
+//                 isSquare: true,
+//               ),
+//               SizedBox(
+//                 height: 4,
+//               ),
+//               Indicator(
+//                 color: Colors.green,
+//                 text: 'Fourth',
+//                 isSquare: true,
+//               ),
+//               SizedBox(
+//                 height: 18,
+//               ),
+//             ],
+//           ),
+//           const SizedBox(
+//             width: 28,
+//           ),
+//         ],
+//       ),
+//     ),
+//   );
+// }
+//
+// List<PieChartSectionData> showingSections() {
+//   return List.generate(4, (i) {
+//     final isTouched = i == touchedIndex;
+//     final fontSize = isTouched ? 25.0 : 16.0;
+//     final radius = isTouched ? 60.0 : 50.0;
+//     const shadows = [Shadow(color: Colors.black, blurRadius: 2)];
+//     switch (i) {
+//       case 0:
+//         return PieChartSectionData(
+//           color: Colors.blue,
+//           value: 40,
+//           title: '40%',
+//           radius: radius,
+//           titleStyle: TextStyle(
+//             fontSize: fontSize,
+//             fontWeight: FontWeight.bold,
+//             color: Colors.black,
+//             shadows: shadows,
+//           ),
+//         );
+//       case 1:
+//         return PieChartSectionData(
+//           color: Colors.yellow,
+//           value: 30,
+//           title: '30%',
+//           radius: radius,
+//           titleStyle: TextStyle(
+//             fontSize: fontSize,
+//             fontWeight: FontWeight.bold,
+//             color: Colors.black,
+//             shadows: shadows,
+//           ),
+//         );
+//       case 2:
+//         return PieChartSectionData(
+//           color: Colors.purple,
+//           value: 15,
+//           title: '15%',
+//           radius: radius,
+//           titleStyle: TextStyle(
+//             fontSize: fontSize,
+//             fontWeight: FontWeight.bold,
+//             color: Colors.black,
+//             shadows: shadows,
+//           ),
+//         );
+//       case 3:
+//         return PieChartSectionData(
+//           color: Colors.green,
+//           value: 15,
+//           title: '15%',
+//           radius: radius,
+//           titleStyle: TextStyle(
+//             fontSize: fontSize,
+//             fontWeight: FontWeight.bold,
+//             color: Colors.black,
+//             shadows: shadows,
+//           ),
+//         );
+//       default:
+//         throw Error();
+//     }
+//   });
+// }
 }

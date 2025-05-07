@@ -3,6 +3,7 @@ import 'package:flutter_animation/advance_icon.dart';
 import 'package:flutter_animation/animate_do.dart';
 import 'package:flutter_animation/animate_size_fade.dart';
 import 'package:flutter_animation/animated_container_page.dart';
+import 'package:flutter_animation/animated_container_screen.dart';
 import 'package:flutter_animation/animated_cross_fade_page.dart';
 import 'package:flutter_animation/animated_default_text_style.dart';
 import 'package:flutter_animation/animated_icon_page.dart';
@@ -72,6 +73,7 @@ import 'package:flutter_animation/stagger_animation_screen/stagger_animation_scr
 import 'package:flutter_animation/star_menu.dart';
 import 'package:flutter_animation/stepper_page.dart';
 import 'package:flutter_animation/sticky_headers_example.dart';
+import 'package:flutter_animation/tabbar_customized_screen.dart';
 import 'package:flutter_animation/table_page.dart';
 import 'package:flutter_animation/text_kit_page.dart';
 import 'package:flutter_animation/toast.dart';
@@ -130,6 +132,19 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Animated container page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  AnimatedContainerScreen()),
+                        );
+                      },
+                      child: Text("Animated Container Screen")),
+
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -178,6 +193,8 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Animated Default TextStyle Page")),
+
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -941,6 +958,16 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Elegant Notification Screen")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const TabbarCustomizedScreen()),
+                        );
+                      },
+                      child: Text("Tabbar Customized Screen")),
 
 
 

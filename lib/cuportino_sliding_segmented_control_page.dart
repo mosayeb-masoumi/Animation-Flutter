@@ -18,6 +18,7 @@ class _CuportinoSlidingSegmentedConrtolPageState
       body: SafeArea(
           child: Center(
         child: CupertinoSlidingSegmentedControl(
+            thumbColor: Colors.greenAccent,
             children: const {
               0: Text("Text 0"),
               1: Text("Text 1"),
