@@ -51,6 +51,7 @@ import 'package:flutter_animation/local_hero_transform_folder/local_hero_transfo
 import 'package:flutter_animation/lottie/lottie_screen.dart';
 import 'package:flutter_animation/more_screen.dart';
 import 'package:flutter_animation/motion_tab_bar_example/motion_tab_bar_screen.dart';
+import 'package:flutter_animation/motion_widgets/motion_widget_screen.dart';
 import 'package:flutter_animation/moving_border_color.dart';
 import 'package:flutter_animation/neomorphism/nepmorphism_page.dart';
 import 'package:flutter_animation/pager_view/carousel_slider_screen.dart';
@@ -969,6 +970,16 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: Text("Tabbar Customized Screen")),
 
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const MotionWidgetScreen()),
+                        );
+                      },
+                      child: Text("Motion Widgets Screen")),
 
 
                 ],
