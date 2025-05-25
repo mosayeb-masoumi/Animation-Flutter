@@ -58,6 +58,7 @@ import 'package:flutter_animation/moving_border_color.dart';
 import 'package:flutter_animation/neomorphism/nepmorphism_page.dart';
 import 'package:flutter_animation/pager_view/carousel_slider_screen.dart';
 import 'package:flutter_animation/photo_view_example.dart';
+import 'package:flutter_animation/pie_timer_screen.dart';
 import 'package:flutter_animation/pin_code_fields_example.dart';
 import 'package:flutter_animation/popup_menu_item.dart';
 import 'package:flutter_animation/positioned_screen.dart';
@@ -1002,6 +1003,16 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("CircularSeekba Screen")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const PieTimerScreen()),
+                        );
+                      },
+                      child: Text("PieTimer Screen")),
 
 
                 ],

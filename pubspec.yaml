@@ -159,6 +159,8 @@ dependencies:
 
   circular_seek_bar: ^1.1.1
 
+  pie_timer: ^1.4.1
+
 
 dev_dependencies:
   flutter_test:
