@@ -17,6 +17,7 @@ import 'package:flutter_animation/chips/chips_page.dart';
 import 'package:flutter_animation/circle_list_menu_page.dart';
 import 'package:flutter_animation/circle_menu_page.dart';
 import 'package:flutter_animation/circular_progress_bar_screen.dart';
+import 'package:flutter_animation/circular_seekbar_screen.dart';
 import 'package:flutter_animation/clipper_painter/clipper_painters_examples.dart';
 import 'package:flutter_animation/container_transformation_page.dart';
 import 'package:flutter_animation/credit_card_page.dart';
@@ -991,6 +992,16 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("CircularProgressBar Screen")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CircularSeekbarScreen()),
+                        );
+                      },
+                      child: Text("CircularSeekba Screen")),
 
 
                 ],
