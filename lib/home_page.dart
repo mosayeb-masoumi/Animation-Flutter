@@ -62,6 +62,7 @@ import 'package:flutter_animation/pie_timer_screen.dart';
 import 'package:flutter_animation/pin_code_fields_example.dart';
 import 'package:flutter_animation/popup_menu_item.dart';
 import 'package:flutter_animation/positioned_screen.dart';
+import 'package:flutter_animation/pretty_animated_text_screen.dart';
 import 'package:flutter_animation/radial_guage_screen.dart';
 import 'package:flutter_animation/radio_list_tile_page.dart';
 import 'package:flutter_animation/refresh_indicatior_page.dart';
@@ -72,6 +73,7 @@ import 'package:flutter_animation/slide_switcher_pahe.dart';
 import 'package:flutter_animation/slider_page.dart';
 import 'package:flutter_animation/sliver_tabbar.dart';
 import 'package:flutter_animation/pager_view/smooth_page_indicator_screen.dart';
+import 'package:flutter_animation/snackbar_seekbar/snackbar_seekbar_screen.dart';
 import 'package:flutter_animation/solar_date_picker_screen.dart';
 import 'package:flutter_animation/stagger_animation_screen/stagger_animation_screen.dart';
 import 'package:flutter_animation/star_menu.dart';
@@ -647,6 +649,18 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Positioned Screen")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const PrettyAnimatedTextScreen()),
+                        );
+                      },
+                      child: Text("Pretty text screen")),
+
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -785,6 +799,7 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Transition")),
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -1013,6 +1028,16 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("PieTimer Screen")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SnackbarSeekbarScreen()),
+                        );
+                      },
+                      child: Text("Snackbar with Seekbar Screen")),
 
 
                 ],
