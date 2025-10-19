@@ -123,6 +123,9 @@ dependencies:
   pretty_animated_text: ^2.0.0
 
   accordion: ^2.6.0
+  getwidget: ^7.0.0
+  flutter_typeahead: ^5.2.0
+  convex_bottom_bar: ^3.2.0
 
   fade_out_particle:
     path: packages/fade_out_particle

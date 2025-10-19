@@ -12,6 +12,7 @@ import 'package:flutter_animation/auto_complete_page.dart';
 import 'package:flutter_animation/back_drop_filter/back_drop_filter1.dart';
 import 'package:flutter_animation/badges_page.dart';
 import 'package:flutter_animation/banner-example.dart';
+import 'package:flutter_animation/bottom_bar_convex_screen.dart';
 import 'package:flutter_animation/chart/chart_page.dart';
 import 'package:flutter_animation/checkbox_listtile.dart';
 import 'package:flutter_animation/chips/chips_page.dart';
@@ -42,7 +43,6 @@ import 'package:flutter_animation/glassmorphism_page.dart';
 import 'package:flutter_animation/globe/globe_screen.dart';
 import 'package:flutter_animation/grid_tile_page.dart';
 import 'package:flutter_animation/hero/hero_screen.dart';
-import 'package:flutter_animation/hero/hero_transition_animation_page.dart';
 import 'package:flutter_animation/indexed_stack_page.dart';
 import 'package:flutter_animation/interactive_viewer_pahe.dart';
 import 'package:flutter_animation/keyboard_virtual/virtual_keyboard_clean_screen.dart';
@@ -56,7 +56,6 @@ import 'package:flutter_animation/more_screen.dart';
 import 'package:flutter_animation/motion_tab_bar_example/motion_tab_bar_screen.dart';
 import 'package:flutter_animation/motion_widgets/motion_widget_screen.dart';
 import 'package:flutter_animation/moving_border_color.dart';
-import 'package:flutter_animation/neomorphism/nepmorphism_page.dart';
 import 'package:flutter_animation/pager_view/carousel_slider_screen.dart';
 import 'package:flutter_animation/photo_view_example.dart';
 import 'package:flutter_animation/pie_timer_screen.dart';
@@ -68,6 +67,7 @@ import 'package:flutter_animation/radial_guage_screen.dart';
 import 'package:flutter_animation/radio_list_tile_page.dart';
 import 'package:flutter_animation/refresh_indicatior_page.dart';
 import 'package:flutter_animation/reorderable_listview_page.dart';
+import 'package:flutter_animation/search/search_no_library_screen.dart';
 import 'package:flutter_animation/shake_textfield_screen.dart';
 import 'package:flutter_animation/shimmer_image_cache.dart';
 import 'package:flutter_animation/slide_switcher_pahe.dart';
@@ -250,6 +250,17 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Badges Page")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => BottomBarConvexScreen()),
+                        );
+                      },
+                      child: Text("Bottom Bar Convex Screen")),
+
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -795,6 +806,22 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("Shake TextField Page")),
+
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                              const SearchNoLibraryScreen()),
+                        );
+                      },
+                      child: Text("Search No Library Screen")),
+
+
+
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
