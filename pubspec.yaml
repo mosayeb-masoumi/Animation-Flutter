@@ -122,6 +122,7 @@ dependencies:
 #  syncfusion_flutter_charts: ^29.1.40
   pretty_animated_text: ^2.0.0
 
+  accordion: ^2.6.0
 
   fade_out_particle:
     path: packages/fade_out_particle

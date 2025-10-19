@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/accordion_screen.dart';
 import 'package:flutter_animation/advance_icon.dart';
 import 'package:flutter_animation/animate_do.dart';
 import 'package:flutter_animation/animate_size_fade.dart';
@@ -128,6 +129,19 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("AnimatedToggleSwitchPage")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                              const AccordionScreen()),
+                        );
+                      },
+                      child: Text("AccordionPage")),
+
+
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(
