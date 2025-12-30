@@ -8,6 +8,7 @@ import 'package:flutter_animation/animated_container_screen.dart';
 import 'package:flutter_animation/animated_cross_fade_page.dart';
 import 'package:flutter_animation/animated_default_text_style.dart';
 import 'package:flutter_animation/animated_icon_page.dart';
+import 'package:flutter_animation/animated_list_page.dart';
 import 'package:flutter_animation/auto_complete_page.dart';
 import 'package:flutter_animation/back_drop_filter/back_drop_filter1.dart';
 import 'package:flutter_animation/badges_page.dart';
@@ -129,6 +130,17 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Text("AnimatedToggleSwitchPage")),
+
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                              const AnimatedListPage()),
+                        );
+                      },
+                      child: Text("AnimatedList Page")),
 
                   ElevatedButton(
                       onPressed: () {

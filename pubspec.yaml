@@ -165,6 +165,8 @@ dependencies:
 
   pie_timer: ^1.4.1
 
+  shared_preferences: ^2.0.13
+
 
 dev_dependencies:
   flutter_test:
